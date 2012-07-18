@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CAD27A3314E50AEF00831AAC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD27A3214E50AEF00831AAC /* Cocoa.framework */; };
+		CAD27A3D14E50AEF00831AAC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAD27A3B14E50AEF00831AAC /* InfoPlist.strings */; };
+		CAD27A3F14E50AEF00831AAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD27A3E14E50AEF00831AAC /* main.m */; };
+		CAD27A4314E50AEF00831AAC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CAD27A4114E50AEF00831AAC /* Credits.rtf */; };
+		CAD27A4614E50AEF00831AAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD27A4514E50AEF00831AAC /* AppDelegate.m */; };
+		CAD27A4914E50AEF00831AAC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD27A4714E50AEF00831AAC /* MainMenu.xib */; };
+		CAD27A5114E50AEF00831AAC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD27A5014E50AEF00831AAC /* SenTestingKit.framework */; };
+		CAD27A5214E50AEF00831AAC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD27A3214E50AEF00831AAC /* Cocoa.framework */; };
+		CAD27A5A14E50AEF00831AAC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAD27A5814E50AEF00831AAC /* InfoPlist.strings */; };
+		CAD27A5D14E50AEF00831AAC /* TableViewWithBindingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD27A5C14E50AEF00831AAC /* TableViewWithBindingTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CAD27A5314E50AEF00831AAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAD27A2514E50AEF00831AAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAD27A2D14E50AEF00831AAC;
+			remoteInfo = TableViewWithBinding;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CAD27A2E14E50AEF00831AAC /* TableViewWithBinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewWithBinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAD27A3214E50AEF00831AAC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		CAD27A3514E50AEF00831AAC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		CAD27A3614E50AEF00831AAC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CAD27A3714E50AEF00831AAC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CAD27A3A14E50AEF00831AAC /* TableViewWithBinding-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TableViewWithBinding-Info.plist"; sourceTree = "<group>"; };
+		CAD27A3C14E50AEF00831AAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CAD27A3E14E50AEF00831AAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CAD27A4014E50AEF00831AAC /* TableViewWithBinding-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TableViewWithBinding-Prefix.pch"; sourceTree = "<group>"; };
+		CAD27A4214E50AEF00831AAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		CAD27A4414E50AEF00831AAC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CAD27A4514E50AEF00831AAC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CAD27A4814E50AEF00831AAC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		CAD27A4F14E50AEF00831AAC /* TableViewWithBindingTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewWithBindingTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAD27A5014E50AEF00831AAC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		CAD27A5714E50AEF00831AAC /* TableViewWithBindingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TableViewWithBindingTests-Info.plist"; sourceTree = "<group>"; };
+		CAD27A5914E50AEF00831AAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CAD27A5B14E50AEF00831AAC /* TableViewWithBindingTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewWithBindingTests.h; sourceTree = "<group>"; };
+		CAD27A5C14E50AEF00831AAC /* TableViewWithBindingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewWithBindingTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CAD27A2B14E50AEF00831AAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD27A3314E50AEF00831AAC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD27A4B14E50AEF00831AAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD27A5114E50AEF00831AAC /* SenTestingKit.framework in Frameworks */,
+				CAD27A5214E50AEF00831AAC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CAD27A2314E50AEF00831AAC = {
+			isa = PBXGroup;
+			children = (
+				CAD27A3814E50AEF00831AAC /* TableViewWithBinding */,
+				CAD27A5514E50AEF00831AAC /* TableViewWithBindingTests */,
+				CAD27A3114E50AEF00831AAC /* Frameworks */,
+				CAD27A2F14E50AEF00831AAC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CAD27A2F14E50AEF00831AAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAD27A2E14E50AEF00831AAC /* TableViewWithBinding.app */,
+				CAD27A4F14E50AEF00831AAC /* TableViewWithBindingTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAD27A3114E50AEF00831AAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAD27A3214E50AEF00831AAC /* Cocoa.framework */,
+				CAD27A5014E50AEF00831AAC /* SenTestingKit.framework */,
+				CAD27A3414E50AEF00831AAC /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAD27A3414E50AEF00831AAC /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAD27A3514E50AEF00831AAC /* AppKit.framework */,
+				CAD27A3614E50AEF00831AAC /* CoreData.framework */,
+				CAD27A3714E50AEF00831AAC /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		CAD27A3814E50AEF00831AAC /* TableViewWithBinding */ = {
+			isa = PBXGroup;
+			children = (
+				CAD27A4414E50AEF00831AAC /* AppDelegate.h */,
+				CAD27A4514E50AEF00831AAC /* AppDelegate.m */,
+				CAD27A4714E50AEF00831AAC /* MainMenu.xib */,
+				CAD27A3914E50AEF00831AAC /* Supporting Files */,
+			);
+			path = TableViewWithBinding;
+			sourceTree = "<group>";
+		};
+		CAD27A3914E50AEF00831AAC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CAD27A3A14E50AEF00831AAC /* TableViewWithBinding-Info.plist */,
+				CAD27A3B14E50AEF00831AAC /* InfoPlist.strings */,
+				CAD27A3E14E50AEF00831AAC /* main.m */,
+				CAD27A4014E50AEF00831AAC /* TableViewWithBinding-Prefix.pch */,
+				CAD27A4114E50AEF00831AAC /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CAD27A5514E50AEF00831AAC /* TableViewWithBindingTests */ = {
+			isa = PBXGroup;
+			children = (
+				CAD27A5B14E50AEF00831AAC /* TableViewWithBindingTests.h */,
+				CAD27A5C14E50AEF00831AAC /* TableViewWithBindingTests.m */,
+				CAD27A5614E50AEF00831AAC /* Supporting Files */,
+			);
+			path = TableViewWithBindingTests;
+			sourceTree = "<group>";
+		};
+		CAD27A5614E50AEF00831AAC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CAD27A5714E50AEF00831AAC /* TableViewWithBindingTests-Info.plist */,
+				CAD27A5814E50AEF00831AAC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CAD27A2D14E50AEF00831AAC /* TableViewWithBinding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAD27A6014E50AEF00831AAC /* Build configuration list for PBXNativeTarget "TableViewWithBinding" */;
+			buildPhases = (
+				CAD27A2A14E50AEF00831AAC /* Sources */,
+				CAD27A2B14E50AEF00831AAC /* Frameworks */,
+				CAD27A2C14E50AEF00831AAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TableViewWithBinding;
+			productName = TableViewWithBinding;
+			productReference = CAD27A2E14E50AEF00831AAC /* TableViewWithBinding.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CAD27A4E14E50AEF00831AAC /* TableViewWithBindingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAD27A6314E50AEF00831AAC /* Build configuration list for PBXNativeTarget "TableViewWithBindingTests" */;
+			buildPhases = (
+				CAD27A4A14E50AEF00831AAC /* Sources */,
+				CAD27A4B14E50AEF00831AAC /* Frameworks */,
+				CAD27A4C14E50AEF00831AAC /* Resources */,
+				CAD27A4D14E50AEF00831AAC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAD27A5414E50AEF00831AAC /* PBXTargetDependency */,
+			);
+			name = TableViewWithBindingTests;
+			productName = TableViewWithBindingTests;
+			productReference = CAD27A4F14E50AEF00831AAC /* TableViewWithBindingTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CAD27A2514E50AEF00831AAC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = CAD27A2814E50AEF00831AAC /* Build configuration list for PBXProject "TableViewWithBinding" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CAD27A2314E50AEF00831AAC;
+			productRefGroup = CAD27A2F14E50AEF00831AAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CAD27A2D14E50AEF00831AAC /* TableViewWithBinding */,
+				CAD27A4E14E50AEF00831AAC /* TableViewWithBindingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CAD27A2C14E50AEF00831AAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD27A3D14E50AEF00831AAC /* InfoPlist.strings in Resources */,
+				CAD27A4314E50AEF00831AAC /* Credits.rtf in Resources */,
+				CAD27A4914E50AEF00831AAC /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD27A4C14E50AEF00831AAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD27A5A14E50AEF00831AAC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CAD27A4D14E50AEF00831AAC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CAD27A2A14E50AEF00831AAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD27A3F14E50AEF00831AAC /* main.m in Sources */,
+				CAD27A4614E50AEF00831AAC /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD27A4A14E50AEF00831AAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD27A5D14E50AEF00831AAC /* TableViewWithBindingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAD27A5414E50AEF00831AAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAD27A2D14E50AEF00831AAC /* TableViewWithBinding */;
+			targetProxy = CAD27A5314E50AEF00831AAC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CAD27A3B14E50AEF00831AAC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAD27A3C14E50AEF00831AAC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CAD27A4114E50AEF00831AAC /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAD27A4214E50AEF00831AAC /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		CAD27A4714E50AEF00831AAC /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAD27A4814E50AEF00831AAC /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		CAD27A5814E50AEF00831AAC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAD27A5914E50AEF00831AAC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CAD27A5E14E50AEF00831AAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CAD27A5F14E50AEF00831AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CAD27A6114E50AEF00831AAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TableViewWithBinding/TableViewWithBinding-Prefix.pch";
+				INFOPLIST_FILE = "TableViewWithBinding/TableViewWithBinding-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CAD27A6214E50AEF00831AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TableViewWithBinding/TableViewWithBinding-Prefix.pch";
+				INFOPLIST_FILE = "TableViewWithBinding/TableViewWithBinding-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CAD27A6414E50AEF00831AAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TableViewWithBinding.app/Contents/MacOS/TableViewWithBinding";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TableViewWithBinding/TableViewWithBinding-Prefix.pch";
+				INFOPLIST_FILE = "TableViewWithBindingTests/TableViewWithBindingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		CAD27A6514E50AEF00831AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TableViewWithBinding.app/Contents/MacOS/TableViewWithBinding";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TableViewWithBinding/TableViewWithBinding-Prefix.pch";
+				INFOPLIST_FILE = "TableViewWithBindingTests/TableViewWithBindingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CAD27A2814E50AEF00831AAC /* Build configuration list for PBXProject "TableViewWithBinding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAD27A5E14E50AEF00831AAC /* Debug */,
+				CAD27A5F14E50AEF00831AAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAD27A6014E50AEF00831AAC /* Build configuration list for PBXNativeTarget "TableViewWithBinding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAD27A6114E50AEF00831AAC /* Debug */,
+				CAD27A6214E50AEF00831AAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CAD27A6314E50AEF00831AAC /* Build configuration list for PBXNativeTarget "TableViewWithBindingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAD27A6414E50AEF00831AAC /* Debug */,
+				CAD27A6514E50AEF00831AAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CAD27A2514E50AEF00831AAC /* Project object */;
+}

@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA23891614FF743900C6874E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA23891514FF743900C6874E /* Cocoa.framework */; };
+		CA23892014FF743900C6874E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA23891E14FF743900C6874E /* InfoPlist.strings */; };
+		CA23892214FF743900C6874E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA23892114FF743900C6874E /* main.m */; };
+		CA23892614FF743900C6874E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CA23892414FF743900C6874E /* Credits.rtf */; };
+		CA23892914FF743900C6874E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA23892814FF743900C6874E /* AppDelegate.m */; };
+		CA23892C14FF743900C6874E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA23892A14FF743900C6874E /* MainMenu.xib */; };
+		CA23893414FF743A00C6874E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA23893314FF743A00C6874E /* SenTestingKit.framework */; };
+		CA23893514FF743A00C6874E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA23891514FF743900C6874E /* Cocoa.framework */; };
+		CA23893D14FF743A00C6874E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA23893B14FF743A00C6874E /* InfoPlist.strings */; };
+		CA23894014FF743A00C6874E /* AddPanelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA23893F14FF743A00C6874E /* AddPanelTests.m */; };
+		CA23894B14FF746300C6874E /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA23894A14FF746300C6874E /* AppController.m */; };
+		CA23894E14FF74EA00C6874E /* MyPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA23894D14FF74EA00C6874E /* MyPanelController.m */; };
+		CA23895014FF760800C6874E /* MyPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA23894F14FF760800C6874E /* MyPanel.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA23893614FF743A00C6874E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA23890814FF743900C6874E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA23891014FF743900C6874E;
+			remoteInfo = AddPanel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CA23891114FF743900C6874E /* AddPanel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddPanel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA23891514FF743900C6874E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		CA23891814FF743900C6874E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		CA23891914FF743900C6874E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CA23891A14FF743900C6874E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CA23891D14FF743900C6874E /* AddPanel-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AddPanel-Info.plist"; sourceTree = "<group>"; };
+		CA23891F14FF743900C6874E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CA23892114FF743900C6874E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CA23892314FF743900C6874E /* AddPanel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AddPanel-Prefix.pch"; sourceTree = "<group>"; };
+		CA23892514FF743900C6874E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		CA23892714FF743900C6874E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CA23892814FF743900C6874E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CA23892B14FF743900C6874E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		CA23893214FF743A00C6874E /* AddPanelTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AddPanelTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA23893314FF743A00C6874E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		CA23893A14FF743A00C6874E /* AddPanelTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AddPanelTests-Info.plist"; sourceTree = "<group>"; };
+		CA23893C14FF743A00C6874E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CA23893E14FF743A00C6874E /* AddPanelTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddPanelTests.h; sourceTree = "<group>"; };
+		CA23893F14FF743A00C6874E /* AddPanelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddPanelTests.m; sourceTree = "<group>"; };
+		CA23894914FF746300C6874E /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		CA23894A14FF746300C6874E /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		CA23894C14FF74EA00C6874E /* MyPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPanelController.h; sourceTree = "<group>"; };
+		CA23894D14FF74EA00C6874E /* MyPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPanelController.m; sourceTree = "<group>"; };
+		CA23894F14FF760800C6874E /* MyPanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPanel.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA23890E14FF743900C6874E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA23891614FF743900C6874E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA23892E14FF743A00C6874E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA23893414FF743A00C6874E /* SenTestingKit.framework in Frameworks */,
+				CA23893514FF743A00C6874E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA23890614FF743900C6874E = {
+			isa = PBXGroup;
+			children = (
+				CA23891B14FF743900C6874E /* AddPanel */,
+				CA23893814FF743A00C6874E /* AddPanelTests */,
+				CA23891414FF743900C6874E /* Frameworks */,
+				CA23891214FF743900C6874E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CA23891214FF743900C6874E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA23891114FF743900C6874E /* AddPanel.app */,
+				CA23893214FF743A00C6874E /* AddPanelTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA23891414FF743900C6874E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA23891514FF743900C6874E /* Cocoa.framework */,
+				CA23893314FF743A00C6874E /* SenTestingKit.framework */,
+				CA23891714FF743900C6874E /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA23891714FF743900C6874E /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA23891814FF743900C6874E /* AppKit.framework */,
+				CA23891914FF743900C6874E /* CoreData.framework */,
+				CA23891A14FF743900C6874E /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		CA23891B14FF743900C6874E /* AddPanel */ = {
+			isa = PBXGroup;
+			children = (
+				CA23892714FF743900C6874E /* AppDelegate.h */,
+				CA23892814FF743900C6874E /* AppDelegate.m */,
+				CA23894914FF746300C6874E /* AppController.h */,
+				CA23894A14FF746300C6874E /* AppController.m */,
+				CA23894F14FF760800C6874E /* MyPanel.xib */,
+				CA23894C14FF74EA00C6874E /* MyPanelController.h */,
+				CA23894D14FF74EA00C6874E /* MyPanelController.m */,
+				CA23892A14FF743900C6874E /* MainMenu.xib */,
+				CA23891C14FF743900C6874E /* Supporting Files */,
+			);
+			path = AddPanel;
+			sourceTree = "<group>";
+		};
+		CA23891C14FF743900C6874E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA23891D14FF743900C6874E /* AddPanel-Info.plist */,
+				CA23891E14FF743900C6874E /* InfoPlist.strings */,
+				CA23892114FF743900C6874E /* main.m */,
+				CA23892314FF743900C6874E /* AddPanel-Prefix.pch */,
+				CA23892414FF743900C6874E /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA23893814FF743A00C6874E /* AddPanelTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA23893E14FF743A00C6874E /* AddPanelTests.h */,
+				CA23893F14FF743A00C6874E /* AddPanelTests.m */,
+				CA23893914FF743A00C6874E /* Supporting Files */,
+			);
+			path = AddPanelTests;
+			sourceTree = "<group>";
+		};
+		CA23893914FF743A00C6874E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA23893A14FF743A00C6874E /* AddPanelTests-Info.plist */,
+				CA23893B14FF743A00C6874E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA23891014FF743900C6874E /* AddPanel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA23894314FF743A00C6874E /* Build configuration list for PBXNativeTarget "AddPanel" */;
+			buildPhases = (
+				CA23890D14FF743900C6874E /* Sources */,
+				CA23890E14FF743900C6874E /* Frameworks */,
+				CA23890F14FF743900C6874E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AddPanel;
+			productName = AddPanel;
+			productReference = CA23891114FF743900C6874E /* AddPanel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CA23893114FF743A00C6874E /* AddPanelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA23894614FF743A00C6874E /* Build configuration list for PBXNativeTarget "AddPanelTests" */;
+			buildPhases = (
+				CA23892D14FF743A00C6874E /* Sources */,
+				CA23892E14FF743A00C6874E /* Frameworks */,
+				CA23892F14FF743A00C6874E /* Resources */,
+				CA23893014FF743A00C6874E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA23893714FF743A00C6874E /* PBXTargetDependency */,
+			);
+			name = AddPanelTests;
+			productName = AddPanelTests;
+			productReference = CA23893214FF743A00C6874E /* AddPanelTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA23890814FF743900C6874E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = CA23890B14FF743900C6874E /* Build configuration list for PBXProject "AddPanel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CA23890614FF743900C6874E;
+			productRefGroup = CA23891214FF743900C6874E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA23891014FF743900C6874E /* AddPanel */,
+				CA23893114FF743A00C6874E /* AddPanelTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA23890F14FF743900C6874E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA23892014FF743900C6874E /* InfoPlist.strings in Resources */,
+				CA23892614FF743900C6874E /* Credits.rtf in Resources */,
+				CA23892C14FF743900C6874E /* MainMenu.xib in Resources */,
+				CA23895014FF760800C6874E /* MyPanel.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA23892F14FF743A00C6874E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA23893D14FF743A00C6874E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CA23893014FF743A00C6874E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA23890D14FF743900C6874E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA23892214FF743900C6874E /* main.m in Sources */,
+				CA23892914FF743900C6874E /* AppDelegate.m in Sources */,
+				CA23894B14FF746300C6874E /* AppController.m in Sources */,
+				CA23894E14FF74EA00C6874E /* MyPanelController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA23892D14FF743A00C6874E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA23894014FF743A00C6874E /* AddPanelTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA23893714FF743A00C6874E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA23891014FF743900C6874E /* AddPanel */;
+			targetProxy = CA23893614FF743A00C6874E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CA23891E14FF743900C6874E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA23891F14FF743900C6874E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CA23892414FF743900C6874E /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA23892514FF743900C6874E /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		CA23892A14FF743900C6874E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA23892B14FF743900C6874E /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		CA23893B14FF743A00C6874E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA23893C14FF743A00C6874E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA23894114FF743A00C6874E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CA23894214FF743A00C6874E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CA23894414FF743A00C6874E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AddPanel/AddPanel-Prefix.pch";
+				INFOPLIST_FILE = "AddPanel/AddPanel-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CA23894514FF743A00C6874E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AddPanel/AddPanel-Prefix.pch";
+				INFOPLIST_FILE = "AddPanel/AddPanel-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CA23894714FF743A00C6874E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AddPanel.app/Contents/MacOS/AddPanel";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AddPanel/AddPanel-Prefix.pch";
+				INFOPLIST_FILE = "AddPanelTests/AddPanelTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		CA23894814FF743A00C6874E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AddPanel.app/Contents/MacOS/AddPanel";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AddPanel/AddPanel-Prefix.pch";
+				INFOPLIST_FILE = "AddPanelTests/AddPanelTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA23890B14FF743900C6874E /* Build configuration list for PBXProject "AddPanel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA23894114FF743A00C6874E /* Debug */,
+				CA23894214FF743A00C6874E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA23894314FF743A00C6874E /* Build configuration list for PBXNativeTarget "AddPanel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA23894414FF743A00C6874E /* Debug */,
+				CA23894514FF743A00C6874E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CA23894614FF743A00C6874E /* Build configuration list for PBXNativeTarget "AddPanelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA23894714FF743A00C6874E /* Debug */,
+				CA23894814FF743A00C6874E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA23890814FF743900C6874E /* Project object */;
+}

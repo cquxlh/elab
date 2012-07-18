@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CAF06686150AF36F005E1706 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF06685150AF36F005E1706 /* Cocoa.framework */; };
+		CAF06690150AF36F005E1706 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAF0668E150AF36F005E1706 /* InfoPlist.strings */; };
+		CAF06692150AF36F005E1706 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF06691150AF36F005E1706 /* main.m */; };
+		CAF06696150AF36F005E1706 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CAF06694150AF36F005E1706 /* Credits.rtf */; };
+		CAF06699150AF36F005E1706 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF06698150AF36F005E1706 /* AppDelegate.m */; };
+		CAF0669C150AF36F005E1706 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAF0669A150AF36F005E1706 /* MainMenu.xib */; };
+		CAF066A4150AF370005E1706 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF066A3150AF370005E1706 /* SenTestingKit.framework */; };
+		CAF066A5150AF370005E1706 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF06685150AF36F005E1706 /* Cocoa.framework */; };
+		CAF066AD150AF370005E1706 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAF066AB150AF370005E1706 /* InfoPlist.strings */; };
+		CAF066B0150AF370005E1706 /* FlashCardsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF066AF150AF370005E1706 /* FlashCardsTests.m */; };
+		CAF066BD150AF41B005E1706 /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF066BB150AF41B005E1706 /* Home.m */; };
+		CAF066BE150AF41B005E1706 /* Home.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAF066BC150AF41B005E1706 /* Home.xib */; };
+		CAF066C1150AF559005E1706 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF066C0150AF559005E1706 /* AppController.m */; };
+		CAF066C6150AF8AD005E1706 /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF066C4150AF8AD005E1706 /* Quiz.m */; };
+		CAF066C7150AF8AD005E1706 /* Quiz.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAF066C5150AF8AD005E1706 /* Quiz.xib */; };
+		CAF7E4C1151AD54900DA5943 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF7E4C0151AD54900DA5943 /* Quartz.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CAF066A6150AF370005E1706 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAF06678150AF36F005E1706 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAF06680150AF36F005E1706;
+			remoteInfo = FlashCards;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CAF06681150AF36F005E1706 /* FlashCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAF06685150AF36F005E1706 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		CAF06688150AF36F005E1706 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		CAF06689150AF36F005E1706 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CAF0668A150AF36F005E1706 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CAF0668D150AF36F005E1706 /* FlashCards-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlashCards-Info.plist"; sourceTree = "<group>"; };
+		CAF0668F150AF36F005E1706 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CAF06691150AF36F005E1706 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CAF06693150AF36F005E1706 /* FlashCards-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlashCards-Prefix.pch"; sourceTree = "<group>"; };
+		CAF06695150AF36F005E1706 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		CAF06697150AF36F005E1706 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CAF06698150AF36F005E1706 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CAF0669B150AF36F005E1706 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		CAF066A2150AF370005E1706 /* FlashCardsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashCardsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAF066A3150AF370005E1706 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		CAF066AA150AF370005E1706 /* FlashCardsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlashCardsTests-Info.plist"; sourceTree = "<group>"; };
+		CAF066AC150AF370005E1706 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CAF066AE150AF370005E1706 /* FlashCardsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlashCardsTests.h; sourceTree = "<group>"; };
+		CAF066AF150AF370005E1706 /* FlashCardsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlashCardsTests.m; sourceTree = "<group>"; };
+		CAF066BA150AF41B005E1706 /* Home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
+		CAF066BB150AF41B005E1706 /* Home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
+		CAF066BC150AF41B005E1706 /* Home.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Home.xib; sourceTree = "<group>"; };
+		CAF066BF150AF559005E1706 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		CAF066C0150AF559005E1706 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		CAF066C3150AF8AD005E1706 /* Quiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quiz.h; sourceTree = "<group>"; };
+		CAF066C4150AF8AD005E1706 /* Quiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quiz.m; sourceTree = "<group>"; };
+		CAF066C5150AF8AD005E1706 /* Quiz.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Quiz.xib; sourceTree = "<group>"; };
+		CAF7E4C0151AD54900DA5943 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = ../../../../../System/Library/Frameworks/Quartz.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CAF0667E150AF36F005E1706 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAF06686150AF36F005E1706 /* Cocoa.framework in Frameworks */,
+				CAF7E4C1151AD54900DA5943 /* Quartz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAF0669E150AF370005E1706 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAF066A4150AF370005E1706 /* SenTestingKit.framework in Frameworks */,
+				CAF066A5150AF370005E1706 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CAF06676150AF36F005E1706 = {
+			isa = PBXGroup;
+			children = (
+				CAF0668B150AF36F005E1706 /* FlashCards */,
+				CAF066A8150AF370005E1706 /* FlashCardsTests */,
+				CAF06684150AF36F005E1706 /* Frameworks */,
+				CAF06682150AF36F005E1706 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CAF06682150AF36F005E1706 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAF06681150AF36F005E1706 /* FlashCards.app */,
+				CAF066A2150AF370005E1706 /* FlashCardsTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAF06684150AF36F005E1706 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAF7E4C0151AD54900DA5943 /* Quartz.framework */,
+				CAF06685150AF36F005E1706 /* Cocoa.framework */,
+				CAF066A3150AF370005E1706 /* SenTestingKit.framework */,
+				CAF06687150AF36F005E1706 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAF06687150AF36F005E1706 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAF06688150AF36F005E1706 /* AppKit.framework */,
+				CAF06689150AF36F005E1706 /* CoreData.framework */,
+				CAF0668A150AF36F005E1706 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		CAF0668B150AF36F005E1706 /* FlashCards */ = {
+			isa = PBXGroup;
+			children = (
+				CAF066C2150AF88A005E1706 /* Quiz */,
+				CAF066B9150AF3C5005E1706 /* Home */,
+				CAF06697150AF36F005E1706 /* AppDelegate.h */,
+				CAF06698150AF36F005E1706 /* AppDelegate.m */,
+				CAF0669A150AF36F005E1706 /* MainMenu.xib */,
+				CAF066BF150AF559005E1706 /* AppController.h */,
+				CAF066C0150AF559005E1706 /* AppController.m */,
+				CAF0668C150AF36F005E1706 /* Supporting Files */,
+			);
+			path = FlashCards;
+			sourceTree = "<group>";
+		};
+		CAF0668C150AF36F005E1706 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CAF0668D150AF36F005E1706 /* FlashCards-Info.plist */,
+				CAF0668E150AF36F005E1706 /* InfoPlist.strings */,
+				CAF06691150AF36F005E1706 /* main.m */,
+				CAF06693150AF36F005E1706 /* FlashCards-Prefix.pch */,
+				CAF06694150AF36F005E1706 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CAF066A8150AF370005E1706 /* FlashCardsTests */ = {
+			isa = PBXGroup;
+			children = (
+				CAF066AE150AF370005E1706 /* FlashCardsTests.h */,
+				CAF066AF150AF370005E1706 /* FlashCardsTests.m */,
+				CAF066A9150AF370005E1706 /* Supporting Files */,
+			);
+			path = FlashCardsTests;
+			sourceTree = "<group>";
+		};
+		CAF066A9150AF370005E1706 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CAF066AA150AF370005E1706 /* FlashCardsTests-Info.plist */,
+				CAF066AB150AF370005E1706 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CAF066B9150AF3C5005E1706 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CAF066BA150AF41B005E1706 /* Home.h */,
+				CAF066BB150AF41B005E1706 /* Home.m */,
+				CAF066BC150AF41B005E1706 /* Home.xib */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		CAF066C2150AF88A005E1706 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				CAF066C3150AF8AD005E1706 /* Quiz.h */,
+				CAF066C4150AF8AD005E1706 /* Quiz.m */,
+				CAF066C5150AF8AD005E1706 /* Quiz.xib */,
+			);
+			name = Quiz;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CAF06680150AF36F005E1706 /* FlashCards */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAF066B3150AF370005E1706 /* Build configuration list for PBXNativeTarget "FlashCards" */;
+			buildPhases = (
+				CAF0667D150AF36F005E1706 /* Sources */,
+				CAF0667E150AF36F005E1706 /* Frameworks */,
+				CAF0667F150AF36F005E1706 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlashCards;
+			productName = FlashCards;
+			productReference = CAF06681150AF36F005E1706 /* FlashCards.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CAF066A1150AF370005E1706 /* FlashCardsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAF066B6150AF370005E1706 /* Build configuration list for PBXNativeTarget "FlashCardsTests" */;
+			buildPhases = (
+				CAF0669D150AF370005E1706 /* Sources */,
+				CAF0669E150AF370005E1706 /* Frameworks */,
+				CAF0669F150AF370005E1706 /* Resources */,
+				CAF066A0150AF370005E1706 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAF066A7150AF370005E1706 /* PBXTargetDependency */,
+			);
+			name = FlashCardsTests;
+			productName = FlashCardsTests;
+			productReference = CAF066A2150AF370005E1706 /* FlashCardsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CAF06678150AF36F005E1706 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = CAF0667B150AF36F005E1706 /* Build configuration list for PBXProject "FlashCards" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CAF06676150AF36F005E1706;
+			productRefGroup = CAF06682150AF36F005E1706 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CAF06680150AF36F005E1706 /* FlashCards */,
+				CAF066A1150AF370005E1706 /* FlashCardsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CAF0667F150AF36F005E1706 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAF06690150AF36F005E1706 /* InfoPlist.strings in Resources */,
+				CAF06696150AF36F005E1706 /* Credits.rtf in Resources */,
+				CAF0669C150AF36F005E1706 /* MainMenu.xib in Resources */,
+				CAF066BE150AF41B005E1706 /* Home.xib in Resources */,
+				CAF066C7150AF8AD005E1706 /* Quiz.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAF0669F150AF370005E1706 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAF066AD150AF370005E1706 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CAF066A0150AF370005E1706 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CAF0667D150AF36F005E1706 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAF06692150AF36F005E1706 /* main.m in Sources */,
+				CAF06699150AF36F005E1706 /* AppDelegate.m in Sources */,
+				CAF066BD150AF41B005E1706 /* Home.m in Sources */,
+				CAF066C1150AF559005E1706 /* AppController.m in Sources */,
+				CAF066C6150AF8AD005E1706 /* Quiz.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAF0669D150AF370005E1706 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAF066B0150AF370005E1706 /* FlashCardsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAF066A7150AF370005E1706 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAF06680150AF36F005E1706 /* FlashCards */;
+			targetProxy = CAF066A6150AF370005E1706 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CAF0668E150AF36F005E1706 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAF0668F150AF36F005E1706 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CAF06694150AF36F005E1706 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAF06695150AF36F005E1706 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		CAF0669A150AF36F005E1706 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAF0669B150AF36F005E1706 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		CAF066AB150AF370005E1706 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAF066AC150AF370005E1706 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CAF066B1150AF370005E1706 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CAF066B2150AF370005E1706 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CAF066B4150AF370005E1706 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlashCards/FlashCards-Prefix.pch";
+				INFOPLIST_FILE = "FlashCards/FlashCards-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CAF066B5150AF370005E1706 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlashCards/FlashCards-Prefix.pch";
+				INFOPLIST_FILE = "FlashCards/FlashCards-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CAF066B7150AF370005E1706 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FlashCards.app/Contents/MacOS/FlashCards";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlashCards/FlashCards-Prefix.pch";
+				INFOPLIST_FILE = "FlashCardsTests/FlashCardsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		CAF066B8150AF370005E1706 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FlashCards.app/Contents/MacOS/FlashCards";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlashCards/FlashCards-Prefix.pch";
+				INFOPLIST_FILE = "FlashCardsTests/FlashCardsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CAF0667B150AF36F005E1706 /* Build configuration list for PBXProject "FlashCards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAF066B1150AF370005E1706 /* Debug */,
+				CAF066B2150AF370005E1706 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAF066B3150AF370005E1706 /* Build configuration list for PBXNativeTarget "FlashCards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAF066B4150AF370005E1706 /* Debug */,
+				CAF066B5150AF370005E1706 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAF066B6150AF370005E1706 /* Build configuration list for PBXNativeTarget "FlashCardsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAF066B7150AF370005E1706 /* Debug */,
+				CAF066B8150AF370005E1706 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CAF06678150AF36F005E1706 /* Project object */;
+}

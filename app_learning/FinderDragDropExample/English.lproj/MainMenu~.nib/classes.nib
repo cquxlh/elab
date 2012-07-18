@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {
+            CLASS = Controller; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {arrayController = NSArrayController; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = DragDropTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

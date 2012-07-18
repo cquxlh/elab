@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CAD664A21579D1860090045A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD664A11579D1860090045A /* Cocoa.framework */; };
+		CAD664AC1579D1860090045A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAD664AA1579D1860090045A /* InfoPlist.strings */; };
+		CAD664AE1579D1860090045A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD664AD1579D1860090045A /* main.m */; };
+		CAD664B21579D1860090045A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CAD664B01579D1860090045A /* Credits.rtf */; };
+		CAD664B51579D1860090045A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD664B41579D1860090045A /* AppDelegate.m */; };
+		CAD664B81579D1860090045A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD664B61579D1860090045A /* MainMenu.xib */; };
+		CAD664C01579D1860090045A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD664BF1579D1860090045A /* SenTestingKit.framework */; };
+		CAD664C11579D1860090045A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD664A11579D1860090045A /* Cocoa.framework */; };
+		CAD664C91579D1860090045A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAD664C71579D1860090045A /* InfoPlist.strings */; };
+		CAD664CC1579D1860090045A /* FinderDragDropSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD664CB1579D1860090045A /* FinderDragDropSampleTests.m */; };
+		CAD664DB1579D99F0090045A /* MyController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD664DA1579D99F0090045A /* MyController.m */; };
+		CAD664DE1579DC710090045A /* DragDropTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD664DD1579DC710090045A /* DragDropTableView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CAD664C21579D1860090045A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAD664941579D1860090045A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAD6649C1579D1860090045A;
+			remoteInfo = FinderDragDropSample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CAD6649D1579D1860090045A /* FinderDragDropSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinderDragDropSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAD664A11579D1860090045A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		CAD664A41579D1860090045A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		CAD664A51579D1860090045A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CAD664A61579D1860090045A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CAD664A91579D1860090045A /* FinderDragDropSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FinderDragDropSample-Info.plist"; sourceTree = "<group>"; };
+		CAD664AB1579D1860090045A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CAD664AD1579D1860090045A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CAD664AF1579D1860090045A /* FinderDragDropSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinderDragDropSample-Prefix.pch"; sourceTree = "<group>"; };
+		CAD664B11579D1860090045A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		CAD664B31579D1860090045A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CAD664B41579D1860090045A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CAD664B71579D1860090045A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		CAD664BE1579D1860090045A /* FinderDragDropSampleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinderDragDropSampleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAD664BF1579D1860090045A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		CAD664C61579D1860090045A /* FinderDragDropSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FinderDragDropSampleTests-Info.plist"; sourceTree = "<group>"; };
+		CAD664C81579D1860090045A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CAD664CA1579D1860090045A /* FinderDragDropSampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderDragDropSampleTests.h; sourceTree = "<group>"; };
+		CAD664CB1579D1860090045A /* FinderDragDropSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinderDragDropSampleTests.m; sourceTree = "<group>"; };
+		CAD664D91579D99F0090045A /* MyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyController.h; sourceTree = "<group>"; };
+		CAD664DA1579D99F0090045A /* MyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyController.m; sourceTree = "<group>"; };
+		CAD664DC1579DC710090045A /* DragDropTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDropTableView.h; sourceTree = "<group>"; };
+		CAD664DD1579DC710090045A /* DragDropTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragDropTableView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CAD6649A1579D1860090045A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD664A21579D1860090045A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD664BA1579D1860090045A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD664C01579D1860090045A /* SenTestingKit.framework in Frameworks */,
+				CAD664C11579D1860090045A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CAD664921579D1860090045A = {
+			isa = PBXGroup;
+			children = (
+				CAD664A71579D1860090045A /* FinderDragDropSample */,
+				CAD664C41579D1860090045A /* FinderDragDropSampleTests */,
+				CAD664A01579D1860090045A /* Frameworks */,
+				CAD6649E1579D1860090045A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CAD6649E1579D1860090045A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAD6649D1579D1860090045A /* FinderDragDropSample.app */,
+				CAD664BE1579D1860090045A /* FinderDragDropSampleTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAD664A01579D1860090045A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAD664A11579D1860090045A /* Cocoa.framework */,
+				CAD664BF1579D1860090045A /* SenTestingKit.framework */,
+				CAD664A31579D1860090045A /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAD664A31579D1860090045A /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAD664A41579D1860090045A /* AppKit.framework */,
+				CAD664A51579D1860090045A /* CoreData.framework */,
+				CAD664A61579D1860090045A /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		CAD664A71579D1860090045A /* FinderDragDropSample */ = {
+			isa = PBXGroup;
+			children = (
+				CAD664B31579D1860090045A /* AppDelegate.h */,
+				CAD664B41579D1860090045A /* AppDelegate.m */,
+				CAD664B61579D1860090045A /* MainMenu.xib */,
+				CAD664DC1579DC710090045A /* DragDropTableView.h */,
+				CAD664DD1579DC710090045A /* DragDropTableView.m */,
+				CAD664D91579D99F0090045A /* MyController.h */,
+				CAD664DA1579D99F0090045A /* MyController.m */,
+				CAD664A81579D1860090045A /* Supporting Files */,
+			);
+			path = FinderDragDropSample;
+			sourceTree = "<group>";
+		};
+		CAD664A81579D1860090045A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CAD664A91579D1860090045A /* FinderDragDropSample-Info.plist */,
+				CAD664AA1579D1860090045A /* InfoPlist.strings */,
+				CAD664AD1579D1860090045A /* main.m */,
+				CAD664AF1579D1860090045A /* FinderDragDropSample-Prefix.pch */,
+				CAD664B01579D1860090045A /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CAD664C41579D1860090045A /* FinderDragDropSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				CAD664CA1579D1860090045A /* FinderDragDropSampleTests.h */,
+				CAD664CB1579D1860090045A /* FinderDragDropSampleTests.m */,
+				CAD664C51579D1860090045A /* Supporting Files */,
+			);
+			path = FinderDragDropSampleTests;
+			sourceTree = "<group>";
+		};
+		CAD664C51579D1860090045A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CAD664C61579D1860090045A /* FinderDragDropSampleTests-Info.plist */,
+				CAD664C71579D1860090045A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CAD6649C1579D1860090045A /* FinderDragDropSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAD664CF1579D1860090045A /* Build configuration list for PBXNativeTarget "FinderDragDropSample" */;
+			buildPhases = (
+				CAD664991579D1860090045A /* Sources */,
+				CAD6649A1579D1860090045A /* Frameworks */,
+				CAD6649B1579D1860090045A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FinderDragDropSample;
+			productName = FinderDragDropSample;
+			productReference = CAD6649D1579D1860090045A /* FinderDragDropSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CAD664BD1579D1860090045A /* FinderDragDropSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAD664D21579D1860090045A /* Build configuration list for PBXNativeTarget "FinderDragDropSampleTests" */;
+			buildPhases = (
+				CAD664B91579D1860090045A /* Sources */,
+				CAD664BA1579D1860090045A /* Frameworks */,
+				CAD664BB1579D1860090045A /* Resources */,
+				CAD664BC1579D1860090045A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAD664C31579D1860090045A /* PBXTargetDependency */,
+			);
+			name = FinderDragDropSampleTests;
+			productName = FinderDragDropSampleTests;
+			productReference = CAD664BE1579D1860090045A /* FinderDragDropSampleTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CAD664941579D1860090045A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = CAD664971579D1860090045A /* Build configuration list for PBXProject "FinderDragDropSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CAD664921579D1860090045A;
+			productRefGroup = CAD6649E1579D1860090045A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CAD6649C1579D1860090045A /* FinderDragDropSample */,
+				CAD664BD1579D1860090045A /* FinderDragDropSampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CAD6649B1579D1860090045A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD664AC1579D1860090045A /* InfoPlist.strings in Resources */,
+				CAD664B21579D1860090045A /* Credits.rtf in Resources */,
+				CAD664B81579D1860090045A /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD664BB1579D1860090045A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD664C91579D1860090045A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CAD664BC1579D1860090045A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CAD664991579D1860090045A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD664AE1579D1860090045A /* main.m in Sources */,
+				CAD664B51579D1860090045A /* AppDelegate.m in Sources */,
+				CAD664DB1579D99F0090045A /* MyController.m in Sources */,
+				CAD664DE1579DC710090045A /* DragDropTableView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD664B91579D1860090045A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD664CC1579D1860090045A /* FinderDragDropSampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAD664C31579D1860090045A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAD6649C1579D1860090045A /* FinderDragDropSample */;
+			targetProxy = CAD664C21579D1860090045A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CAD664AA1579D1860090045A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAD664AB1579D1860090045A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CAD664B01579D1860090045A /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAD664B11579D1860090045A /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		CAD664B61579D1860090045A /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAD664B71579D1860090045A /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		CAD664C71579D1860090045A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAD664C81579D1860090045A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CAD664CD1579D1860090045A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CAD664CE1579D1860090045A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CAD664D01579D1860090045A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FinderDragDropSample/FinderDragDropSample-Prefix.pch";
+				INFOPLIST_FILE = "FinderDragDropSample/FinderDragDropSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CAD664D11579D1860090045A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FinderDragDropSample/FinderDragDropSample-Prefix.pch";
+				INFOPLIST_FILE = "FinderDragDropSample/FinderDragDropSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CAD664D31579D1860090045A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FinderDragDropSample.app/Contents/MacOS/FinderDragDropSample";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FinderDragDropSample/FinderDragDropSample-Prefix.pch";
+				INFOPLIST_FILE = "FinderDragDropSampleTests/FinderDragDropSampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		CAD664D41579D1860090045A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FinderDragDropSample.app/Contents/MacOS/FinderDragDropSample";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FinderDragDropSample/FinderDragDropSample-Prefix.pch";
+				INFOPLIST_FILE = "FinderDragDropSampleTests/FinderDragDropSampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CAD664971579D1860090045A /* Build configuration list for PBXProject "FinderDragDropSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAD664CD1579D1860090045A /* Debug */,
+				CAD664CE1579D1860090045A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAD664CF1579D1860090045A /* Build configuration list for PBXNativeTarget "FinderDragDropSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAD664D01579D1860090045A /* Debug */,
+				CAD664D11579D1860090045A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CAD664D21579D1860090045A /* Build configuration list for PBXNativeTarget "FinderDragDropSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAD664D31579D1860090045A /* Debug */,
+				CAD664D41579D1860090045A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CAD664941579D1860090045A /* Project object */;
+}
