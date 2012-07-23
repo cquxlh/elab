@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA9EC14115BD371A0029E112 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9EC14015BD371A0029E112 /* UIKit.framework */; };
+		CA9EC14315BD371A0029E112 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9EC14215BD371A0029E112 /* Foundation.framework */; };
+		CA9EC14515BD371A0029E112 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9EC14415BD371A0029E112 /* CoreGraphics.framework */; };
+		CA9EC14B15BD371A0029E112 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA9EC14915BD371A0029E112 /* InfoPlist.strings */; };
+		CA9EC14D15BD371A0029E112 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9EC14C15BD371A0029E112 /* main.m */; };
+		CA9EC15115BD371A0029E112 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9EC15015BD371A0029E112 /* AppDelegate.m */; };
+		CA9EC15415BD371A0029E112 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9EC15315BD371A0029E112 /* MasterViewController.m */; };
+		CA9EC15715BD371A0029E112 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9EC15615BD371A0029E112 /* DetailViewController.m */; };
+		CA9EC15A15BD371A0029E112 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9EC15815BD371A0029E112 /* MasterViewController.xib */; };
+		CA9EC15D15BD371A0029E112 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9EC15B15BD371A0029E112 /* DetailViewController.xib */; };
+		CA9EC16515BD371A0029E112 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9EC16415BD371A0029E112 /* SenTestingKit.framework */; };
+		CA9EC16615BD371A0029E112 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9EC14015BD371A0029E112 /* UIKit.framework */; };
+		CA9EC16715BD371A0029E112 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9EC14215BD371A0029E112 /* Foundation.framework */; };
+		CA9EC16F15BD371A0029E112 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA9EC16D15BD371A0029E112 /* InfoPlist.strings */; };
+		CA9EC17215BD371A0029E112 /* TempConvertTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9EC17115BD371A0029E112 /* TempConvertTests.m */; };
+		CA9EC17E15BD3EDE0029E112 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9EC17C15BD3EDE0029E112 /* MyViewController.m */; };
+		CA9EC17F15BD3EDE0029E112 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9EC17D15BD3EDE0029E112 /* MyViewController.xib */; };
+		CA9EC18615BD444D0029E112 /* cover320x416.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9EC18515BD444D0029E112 /* cover320x416.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA9EC16815BD371A0029E112 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA9EC13315BD371A0029E112 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA9EC13B15BD371A0029E112;
+			remoteInfo = TempConvert;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CA9EC13C15BD371A0029E112 /* TempConvert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TempConvert.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA9EC14015BD371A0029E112 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CA9EC14215BD371A0029E112 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CA9EC14415BD371A0029E112 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CA9EC14815BD371A0029E112 /* TempConvert-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TempConvert-Info.plist"; sourceTree = "<group>"; };
+		CA9EC14A15BD371A0029E112 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CA9EC14C15BD371A0029E112 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CA9EC14E15BD371A0029E112 /* TempConvert-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TempConvert-Prefix.pch"; sourceTree = "<group>"; };
+		CA9EC14F15BD371A0029E112 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CA9EC15015BD371A0029E112 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CA9EC15215BD371A0029E112 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		CA9EC15315BD371A0029E112 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		CA9EC15515BD371A0029E112 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		CA9EC15615BD371A0029E112 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		CA9EC15915BD371A0029E112 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
+		CA9EC15C15BD371A0029E112 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+		CA9EC16315BD371A0029E112 /* TempConvertTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TempConvertTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA9EC16415BD371A0029E112 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		CA9EC16C15BD371A0029E112 /* TempConvertTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TempConvertTests-Info.plist"; sourceTree = "<group>"; };
+		CA9EC16E15BD371A0029E112 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CA9EC17015BD371A0029E112 /* TempConvertTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TempConvertTests.h; sourceTree = "<group>"; };
+		CA9EC17115BD371A0029E112 /* TempConvertTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TempConvertTests.m; sourceTree = "<group>"; };
+		CA9EC17B15BD3EDE0029E112 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		CA9EC17C15BD3EDE0029E112 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		CA9EC17D15BD3EDE0029E112 /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
+		CA9EC18515BD444D0029E112 /* cover320x416.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cover320x416.png; path = "../../../../../iphone-3.0-cookbook-/C04-Building Interfaces/Walkthrough1-IB Converter/cover320x416.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA9EC13915BD371A0029E112 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA9EC14115BD371A0029E112 /* UIKit.framework in Frameworks */,
+				CA9EC14315BD371A0029E112 /* Foundation.framework in Frameworks */,
+				CA9EC14515BD371A0029E112 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA9EC15F15BD371A0029E112 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA9EC16515BD371A0029E112 /* SenTestingKit.framework in Frameworks */,
+				CA9EC16615BD371A0029E112 /* UIKit.framework in Frameworks */,
+				CA9EC16715BD371A0029E112 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA9EC13115BD371A0029E112 = {
+			isa = PBXGroup;
+			children = (
+				CA9EC14615BD371A0029E112 /* TempConvert */,
+				CA9EC16A15BD371A0029E112 /* TempConvertTests */,
+				CA9EC13F15BD371A0029E112 /* Frameworks */,
+				CA9EC13D15BD371A0029E112 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CA9EC13D15BD371A0029E112 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA9EC13C15BD371A0029E112 /* TempConvert.app */,
+				CA9EC16315BD371A0029E112 /* TempConvertTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA9EC13F15BD371A0029E112 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA9EC14015BD371A0029E112 /* UIKit.framework */,
+				CA9EC14215BD371A0029E112 /* Foundation.framework */,
+				CA9EC14415BD371A0029E112 /* CoreGraphics.framework */,
+				CA9EC16415BD371A0029E112 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA9EC14615BD371A0029E112 /* TempConvert */ = {
+			isa = PBXGroup;
+			children = (
+				CA9EC14F15BD371A0029E112 /* AppDelegate.h */,
+				CA9EC15015BD371A0029E112 /* AppDelegate.m */,
+				CA9EC17B15BD3EDE0029E112 /* MyViewController.h */,
+				CA9EC17C15BD3EDE0029E112 /* MyViewController.m */,
+				CA9EC17D15BD3EDE0029E112 /* MyViewController.xib */,
+				CA9EC15215BD371A0029E112 /* MasterViewController.h */,
+				CA9EC15315BD371A0029E112 /* MasterViewController.m */,
+				CA9EC15515BD371A0029E112 /* DetailViewController.h */,
+				CA9EC15615BD371A0029E112 /* DetailViewController.m */,
+				CA9EC15815BD371A0029E112 /* MasterViewController.xib */,
+				CA9EC15B15BD371A0029E112 /* DetailViewController.xib */,
+				CA9EC14715BD371A0029E112 /* Supporting Files */,
+			);
+			path = TempConvert;
+			sourceTree = "<group>";
+		};
+		CA9EC14715BD371A0029E112 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA9EC18515BD444D0029E112 /* cover320x416.png */,
+				CA9EC14815BD371A0029E112 /* TempConvert-Info.plist */,
+				CA9EC14915BD371A0029E112 /* InfoPlist.strings */,
+				CA9EC14C15BD371A0029E112 /* main.m */,
+				CA9EC14E15BD371A0029E112 /* TempConvert-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA9EC16A15BD371A0029E112 /* TempConvertTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA9EC17015BD371A0029E112 /* TempConvertTests.h */,
+				CA9EC17115BD371A0029E112 /* TempConvertTests.m */,
+				CA9EC16B15BD371A0029E112 /* Supporting Files */,
+			);
+			path = TempConvertTests;
+			sourceTree = "<group>";
+		};
+		CA9EC16B15BD371A0029E112 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA9EC16C15BD371A0029E112 /* TempConvertTests-Info.plist */,
+				CA9EC16D15BD371A0029E112 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA9EC13B15BD371A0029E112 /* TempConvert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA9EC17515BD371A0029E112 /* Build configuration list for PBXNativeTarget "TempConvert" */;
+			buildPhases = (
+				CA9EC13815BD371A0029E112 /* Sources */,
+				CA9EC13915BD371A0029E112 /* Frameworks */,
+				CA9EC13A15BD371A0029E112 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TempConvert;
+			productName = TempConvert;
+			productReference = CA9EC13C15BD371A0029E112 /* TempConvert.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CA9EC16215BD371A0029E112 /* TempConvertTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA9EC17815BD371A0029E112 /* Build configuration list for PBXNativeTarget "TempConvertTests" */;
+			buildPhases = (
+				CA9EC15E15BD371A0029E112 /* Sources */,
+				CA9EC15F15BD371A0029E112 /* Frameworks */,
+				CA9EC16015BD371A0029E112 /* Resources */,
+				CA9EC16115BD371A0029E112 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA9EC16915BD371A0029E112 /* PBXTargetDependency */,
+			);
+			name = TempConvertTests;
+			productName = TempConvertTests;
+			productReference = CA9EC16315BD371A0029E112 /* TempConvertTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA9EC13315BD371A0029E112 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = CA9EC13615BD371A0029E112 /* Build configuration list for PBXProject "TempConvert" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CA9EC13115BD371A0029E112;
+			productRefGroup = CA9EC13D15BD371A0029E112 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA9EC13B15BD371A0029E112 /* TempConvert */,
+				CA9EC16215BD371A0029E112 /* TempConvertTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA9EC13A15BD371A0029E112 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA9EC14B15BD371A0029E112 /* InfoPlist.strings in Resources */,
+				CA9EC15A15BD371A0029E112 /* MasterViewController.xib in Resources */,
+				CA9EC15D15BD371A0029E112 /* DetailViewController.xib in Resources */,
+				CA9EC17F15BD3EDE0029E112 /* MyViewController.xib in Resources */,
+				CA9EC18615BD444D0029E112 /* cover320x416.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA9EC16015BD371A0029E112 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA9EC16F15BD371A0029E112 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CA9EC16115BD371A0029E112 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA9EC13815BD371A0029E112 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA9EC14D15BD371A0029E112 /* main.m in Sources */,
+				CA9EC15115BD371A0029E112 /* AppDelegate.m in Sources */,
+				CA9EC15415BD371A0029E112 /* MasterViewController.m in Sources */,
+				CA9EC15715BD371A0029E112 /* DetailViewController.m in Sources */,
+				CA9EC17E15BD3EDE0029E112 /* MyViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA9EC15E15BD371A0029E112 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA9EC17215BD371A0029E112 /* TempConvertTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA9EC16915BD371A0029E112 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA9EC13B15BD371A0029E112 /* TempConvert */;
+			targetProxy = CA9EC16815BD371A0029E112 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CA9EC14915BD371A0029E112 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA9EC14A15BD371A0029E112 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CA9EC15815BD371A0029E112 /* MasterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA9EC15915BD371A0029E112 /* en */,
+			);
+			name = MasterViewController.xib;
+			sourceTree = "<group>";
+		};
+		CA9EC15B15BD371A0029E112 /* DetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA9EC15C15BD371A0029E112 /* en */,
+			);
+			name = DetailViewController.xib;
+			sourceTree = "<group>";
+		};
+		CA9EC16D15BD371A0029E112 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA9EC16E15BD371A0029E112 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA9EC17315BD371A0029E112 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CA9EC17415BD371A0029E112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA9EC17615BD371A0029E112 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TempConvert/TempConvert-Prefix.pch";
+				INFOPLIST_FILE = "TempConvert/TempConvert-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CA9EC17715BD371A0029E112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TempConvert/TempConvert-Prefix.pch";
+				INFOPLIST_FILE = "TempConvert/TempConvert-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CA9EC17915BD371A0029E112 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TempConvert.app/TempConvert";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TempConvert/TempConvert-Prefix.pch";
+				INFOPLIST_FILE = "TempConvertTests/TempConvertTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		CA9EC17A15BD371A0029E112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TempConvert.app/TempConvert";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TempConvert/TempConvert-Prefix.pch";
+				INFOPLIST_FILE = "TempConvertTests/TempConvertTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA9EC13615BD371A0029E112 /* Build configuration list for PBXProject "TempConvert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA9EC17315BD371A0029E112 /* Debug */,
+				CA9EC17415BD371A0029E112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA9EC17515BD371A0029E112 /* Build configuration list for PBXNativeTarget "TempConvert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA9EC17615BD371A0029E112 /* Debug */,
+				CA9EC17715BD371A0029E112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CA9EC17815BD371A0029E112 /* Build configuration list for PBXNativeTarget "TempConvertTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA9EC17915BD371A0029E112 /* Debug */,
+				CA9EC17A15BD371A0029E112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA9EC13315BD371A0029E112 /* Project object */;
+}
