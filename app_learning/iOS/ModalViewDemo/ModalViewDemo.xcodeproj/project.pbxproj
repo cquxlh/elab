@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CAB966D215BFDF7F008923D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB966D115BFDF7F008923D7 /* UIKit.framework */; };
+		CAB966D415BFDF7F008923D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB966D315BFDF7F008923D7 /* Foundation.framework */; };
+		CAB966D615BFDF7F008923D7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB966D515BFDF7F008923D7 /* CoreGraphics.framework */; };
+		CAB966DC15BFDF7F008923D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAB966DA15BFDF7F008923D7 /* InfoPlist.strings */; };
+		CAB966DE15BFDF7F008923D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB966DD15BFDF7F008923D7 /* main.m */; };
+		CAB966E215BFDF7F008923D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB966E115BFDF7F008923D7 /* AppDelegate.m */; };
+		CAB966E515BFDF80008923D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB966E415BFDF80008923D7 /* ViewController.m */; };
+		CAB966E815BFDF80008923D7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB966E615BFDF80008923D7 /* ViewController.xib */; };
+		CAB966F015BFDF80008923D7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB966EF15BFDF80008923D7 /* SenTestingKit.framework */; };
+		CAB966F115BFDF80008923D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB966D115BFDF7F008923D7 /* UIKit.framework */; };
+		CAB966F215BFDF80008923D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB966D315BFDF7F008923D7 /* Foundation.framework */; };
+		CAB966FA15BFDF80008923D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAB966F815BFDF80008923D7 /* InfoPlist.strings */; };
+		CAB966FD15BFDF80008923D7 /* ModalViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB966FC15BFDF80008923D7 /* ModalViewDemoTests.m */; };
+		CAB9670915BFDFA9008923D7 /* SecondView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB9670715BFDFA9008923D7 /* SecondView.m */; };
+		CAB9670A15BFDFA9008923D7 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB9670815BFDFA9008923D7 /* SecondView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CAB966F315BFDF80008923D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAB966C415BFDF7F008923D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAB966CC15BFDF7F008923D7;
+			remoteInfo = ModalViewDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CAB966CD15BFDF7F008923D7 /* ModalViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModalViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAB966D115BFDF7F008923D7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CAB966D315BFDF7F008923D7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CAB966D515BFDF7F008923D7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CAB966D915BFDF7F008923D7 /* ModalViewDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ModalViewDemo-Info.plist"; sourceTree = "<group>"; };
+		CAB966DB15BFDF7F008923D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CAB966DD15BFDF7F008923D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CAB966DF15BFDF7F008923D7 /* ModalViewDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ModalViewDemo-Prefix.pch"; sourceTree = "<group>"; };
+		CAB966E015BFDF7F008923D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CAB966E115BFDF7F008923D7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CAB966E315BFDF80008923D7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CAB966E415BFDF80008923D7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CAB966E715BFDF80008923D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		CAB966EE15BFDF80008923D7 /* ModalViewDemoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModalViewDemoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAB966EF15BFDF80008923D7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		CAB966F715BFDF80008923D7 /* ModalViewDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ModalViewDemoTests-Info.plist"; sourceTree = "<group>"; };
+		CAB966F915BFDF80008923D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CAB966FB15BFDF80008923D7 /* ModalViewDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModalViewDemoTests.h; sourceTree = "<group>"; };
+		CAB966FC15BFDF80008923D7 /* ModalViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModalViewDemoTests.m; sourceTree = "<group>"; };
+		CAB9670615BFDFA9008923D7 /* SecondView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondView.h; sourceTree = "<group>"; };
+		CAB9670715BFDFA9008923D7 /* SecondView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondView.m; sourceTree = "<group>"; };
+		CAB9670815BFDFA9008923D7 /* SecondView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CAB966CA15BFDF7F008923D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAB966D215BFDF7F008923D7 /* UIKit.framework in Frameworks */,
+				CAB966D415BFDF7F008923D7 /* Foundation.framework in Frameworks */,
+				CAB966D615BFDF7F008923D7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAB966EA15BFDF80008923D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAB966F015BFDF80008923D7 /* SenTestingKit.framework in Frameworks */,
+				CAB966F115BFDF80008923D7 /* UIKit.framework in Frameworks */,
+				CAB966F215BFDF80008923D7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CAB966C215BFDF7F008923D7 = {
+			isa = PBXGroup;
+			children = (
+				CAB966D715BFDF7F008923D7 /* ModalViewDemo */,
+				CAB966F515BFDF80008923D7 /* ModalViewDemoTests */,
+				CAB966D015BFDF7F008923D7 /* Frameworks */,
+				CAB966CE15BFDF7F008923D7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CAB966CE15BFDF7F008923D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAB966CD15BFDF7F008923D7 /* ModalViewDemo.app */,
+				CAB966EE15BFDF80008923D7 /* ModalViewDemoTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAB966D015BFDF7F008923D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAB966D115BFDF7F008923D7 /* UIKit.framework */,
+				CAB966D315BFDF7F008923D7 /* Foundation.framework */,
+				CAB966D515BFDF7F008923D7 /* CoreGraphics.framework */,
+				CAB966EF15BFDF80008923D7 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAB966D715BFDF7F008923D7 /* ModalViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				CAB966E015BFDF7F008923D7 /* AppDelegate.h */,
+				CAB966E115BFDF7F008923D7 /* AppDelegate.m */,
+				CAB966E315BFDF80008923D7 /* ViewController.h */,
+				CAB966E415BFDF80008923D7 /* ViewController.m */,
+				CAB966E615BFDF80008923D7 /* ViewController.xib */,
+				CAB9670615BFDFA9008923D7 /* SecondView.h */,
+				CAB9670715BFDFA9008923D7 /* SecondView.m */,
+				CAB9670815BFDFA9008923D7 /* SecondView.xib */,
+				CAB966D815BFDF7F008923D7 /* Supporting Files */,
+			);
+			path = ModalViewDemo;
+			sourceTree = "<group>";
+		};
+		CAB966D815BFDF7F008923D7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CAB966D915BFDF7F008923D7 /* ModalViewDemo-Info.plist */,
+				CAB966DA15BFDF7F008923D7 /* InfoPlist.strings */,
+				CAB966DD15BFDF7F008923D7 /* main.m */,
+				CAB966DF15BFDF7F008923D7 /* ModalViewDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CAB966F515BFDF80008923D7 /* ModalViewDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				CAB966FB15BFDF80008923D7 /* ModalViewDemoTests.h */,
+				CAB966FC15BFDF80008923D7 /* ModalViewDemoTests.m */,
+				CAB966F615BFDF80008923D7 /* Supporting Files */,
+			);
+			path = ModalViewDemoTests;
+			sourceTree = "<group>";
+		};
+		CAB966F615BFDF80008923D7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CAB966F715BFDF80008923D7 /* ModalViewDemoTests-Info.plist */,
+				CAB966F815BFDF80008923D7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CAB966CC15BFDF7F008923D7 /* ModalViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAB9670015BFDF80008923D7 /* Build configuration list for PBXNativeTarget "ModalViewDemo" */;
+			buildPhases = (
+				CAB966C915BFDF7F008923D7 /* Sources */,
+				CAB966CA15BFDF7F008923D7 /* Frameworks */,
+				CAB966CB15BFDF7F008923D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ModalViewDemo;
+			productName = ModalViewDemo;
+			productReference = CAB966CD15BFDF7F008923D7 /* ModalViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CAB966ED15BFDF80008923D7 /* ModalViewDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAB9670315BFDF80008923D7 /* Build configuration list for PBXNativeTarget "ModalViewDemoTests" */;
+			buildPhases = (
+				CAB966E915BFDF80008923D7 /* Sources */,
+				CAB966EA15BFDF80008923D7 /* Frameworks */,
+				CAB966EB15BFDF80008923D7 /* Resources */,
+				CAB966EC15BFDF80008923D7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAB966F415BFDF80008923D7 /* PBXTargetDependency */,
+			);
+			name = ModalViewDemoTests;
+			productName = ModalViewDemoTests;
+			productReference = CAB966EE15BFDF80008923D7 /* ModalViewDemoTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CAB966C415BFDF7F008923D7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = CAB966C715BFDF7F008923D7 /* Build configuration list for PBXProject "ModalViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CAB966C215BFDF7F008923D7;
+			productRefGroup = CAB966CE15BFDF7F008923D7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CAB966CC15BFDF7F008923D7 /* ModalViewDemo */,
+				CAB966ED15BFDF80008923D7 /* ModalViewDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CAB966CB15BFDF7F008923D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAB966DC15BFDF7F008923D7 /* InfoPlist.strings in Resources */,
+				CAB966E815BFDF80008923D7 /* ViewController.xib in Resources */,
+				CAB9670A15BFDFA9008923D7 /* SecondView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAB966EB15BFDF80008923D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAB966FA15BFDF80008923D7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CAB966EC15BFDF80008923D7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CAB966C915BFDF7F008923D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAB966DE15BFDF7F008923D7 /* main.m in Sources */,
+				CAB966E215BFDF7F008923D7 /* AppDelegate.m in Sources */,
+				CAB966E515BFDF80008923D7 /* ViewController.m in Sources */,
+				CAB9670915BFDFA9008923D7 /* SecondView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAB966E915BFDF80008923D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAB966FD15BFDF80008923D7 /* ModalViewDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAB966F415BFDF80008923D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAB966CC15BFDF7F008923D7 /* ModalViewDemo */;
+			targetProxy = CAB966F315BFDF80008923D7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CAB966DA15BFDF7F008923D7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAB966DB15BFDF7F008923D7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CAB966E615BFDF80008923D7 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAB966E715BFDF80008923D7 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+		CAB966F815BFDF80008923D7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAB966F915BFDF80008923D7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CAB966FE15BFDF80008923D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CAB966FF15BFDF80008923D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CAB9670115BFDF80008923D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ModalViewDemo/ModalViewDemo-Prefix.pch";
+				INFOPLIST_FILE = "ModalViewDemo/ModalViewDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CAB9670215BFDF80008923D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ModalViewDemo/ModalViewDemo-Prefix.pch";
+				INFOPLIST_FILE = "ModalViewDemo/ModalViewDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CAB9670415BFDF80008923D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ModalViewDemo.app/ModalViewDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ModalViewDemo/ModalViewDemo-Prefix.pch";
+				INFOPLIST_FILE = "ModalViewDemoTests/ModalViewDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		CAB9670515BFDF80008923D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ModalViewDemo.app/ModalViewDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ModalViewDemo/ModalViewDemo-Prefix.pch";
+				INFOPLIST_FILE = "ModalViewDemoTests/ModalViewDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CAB966C715BFDF7F008923D7 /* Build configuration list for PBXProject "ModalViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAB966FE15BFDF80008923D7 /* Debug */,
+				CAB966FF15BFDF80008923D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAB9670015BFDF80008923D7 /* Build configuration list for PBXNativeTarget "ModalViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAB9670115BFDF80008923D7 /* Debug */,
+				CAB9670215BFDF80008923D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CAB9670315BFDF80008923D7 /* Build configuration list for PBXNativeTarget "ModalViewDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAB9670415BFDF80008923D7 /* Debug */,
+				CAB9670515BFDF80008923D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CAB966C415BFDF7F008923D7 /* Project object */;
+}

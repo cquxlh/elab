@@ -5,6 +5,26 @@
 	<key>PreferenceSpecifiers</key>
 	<array>
 		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>aihao</string>
+			<key>Titles</key>
+			<array>
+				<string>football</string>
+				<string>paino</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>f</string>
+				<string>p</string>
+			</array>
+			<key>Key</key>
+			<string>aihao</string>
+			<key>DefaultValue</key>
+			<string>football</string>
+		</dict>
+		<dict>
 			<key>Title</key>
 			<string>Group</string>
 			<key>Type</key>

@@ -18,8 +18,29 @@
 
 #pragma mark - View lifecycle
 
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {  
+    [locationManager stopUpdatingLocation];  
+    
+    NSString *strLat = [NSString stringWithFormat:@"%.4f",newLocation.coordinate.latitude];  
+    NSString *strLng = [NSString stringWithFormat:@"%.4f",newLocation.coordinate.longitude];  
+    NSLog(@"Lat: %@  Lng: %@", strLat, strLng);  
+    
+}  
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {  
+    NSLog(@"locError:%@", error);  
+    
+}  
 - (void)viewDidLoad
 {
+    map = [[MKMapView alloc] initWithFrame:[self.view bounds]];  
+    map.showsUserLocation = YES;  
+    map.mapType = MKMapTypeStandard;  
+    [self.view addSubview:map];
+    
+    locationManager = [[CLLocationManager alloc] init];  
+    locationManager.delegate=self;
+    [locationManager startUpdatingLocation];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

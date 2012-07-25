@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA35821015BE49B400FBA2B4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CA35820F15BE49B400FBA2B4 /* Settings.bundle */; };
 		CA9EC14115BD371A0029E112 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9EC14015BD371A0029E112 /* UIKit.framework */; };
 		CA9EC14315BD371A0029E112 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9EC14215BD371A0029E112 /* Foundation.framework */; };
 		CA9EC14515BD371A0029E112 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9EC14415BD371A0029E112 /* CoreGraphics.framework */; };
@@ -24,7 +25,6 @@
 		CA9EC17215BD371A0029E112 /* TempConvertTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9EC17115BD371A0029E112 /* TempConvertTests.m */; };
 		CA9EC17E15BD3EDE0029E112 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9EC17C15BD3EDE0029E112 /* MyViewController.m */; };
 		CA9EC17F15BD3EDE0029E112 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9EC17D15BD3EDE0029E112 /* MyViewController.xib */; };
-		CA9EC18615BD444D0029E112 /* cover320x416.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9EC18515BD444D0029E112 /* cover320x416.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA35820F15BE49B400FBA2B4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		CA9EC13C15BD371A0029E112 /* TempConvert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TempConvert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA9EC14015BD371A0029E112 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CA9EC14215BD371A0029E112 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,7 +64,6 @@
 		CA9EC17B15BD3EDE0029E112 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		CA9EC17C15BD3EDE0029E112 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		CA9EC17D15BD3EDE0029E112 /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
-		CA9EC18515BD444D0029E112 /* cover320x416.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cover320x416.png; path = "../../../../../iphone-3.0-cookbook-/C04-Building Interfaces/Walkthrough1-IB Converter/cover320x416.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +93,7 @@
 		CA9EC13115BD371A0029E112 = {
 			isa = PBXGroup;
 			children = (
+				CA35820F15BE49B400FBA2B4 /* Settings.bundle */,
 				CA9EC14615BD371A0029E112 /* TempConvert */,
 				CA9EC16A15BD371A0029E112 /* TempConvertTests */,
 				CA9EC13F15BD371A0029E112 /* Frameworks */,
@@ -142,7 +143,6 @@
 		CA9EC14715BD371A0029E112 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CA9EC18515BD444D0029E112 /* cover320x416.png */,
 				CA9EC14815BD371A0029E112 /* TempConvert-Info.plist */,
 				CA9EC14915BD371A0029E112 /* InfoPlist.strings */,
 				CA9EC14C15BD371A0029E112 /* main.m */,
@@ -244,7 +244,7 @@
 				CA9EC15A15BD371A0029E112 /* MasterViewController.xib in Resources */,
 				CA9EC15D15BD371A0029E112 /* DetailViewController.xib in Resources */,
 				CA9EC17F15BD3EDE0029E112 /* MyViewController.xib in Resources */,
-				CA9EC18615BD444D0029E112 /* cover320x416.png in Resources */,
+				CA35821015BE49B400FBA2B4 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +461,7 @@
 				CA9EC17715BD371A0029E112 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CA9EC17815BD371A0029E112 /* Build configuration list for PBXNativeTarget "TempConvertTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +470,7 @@
 				CA9EC17A15BD371A0029E112 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

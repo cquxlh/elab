@@ -20,6 +20,8 @@
 		CA35824115BE795E00FBA2B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA35822215BE795E00FBA2B4 /* Foundation.framework */; };
 		CA35824915BE795F00FBA2B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA35824715BE795F00FBA2B4 /* InfoPlist.strings */; };
 		CA35824C15BE795F00FBA2B4 /* MapViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA35824B15BE795F00FBA2B4 /* MapViewDemoTests.m */; };
+		CA35825615BE7B5F00FBA2B4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA35825515BE7B5F00FBA2B4 /* CoreLocation.framework */; };
+		CA35825815BE7C5D00FBA2B4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA35825715BE7C5D00FBA2B4 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,21 +39,23 @@
 		CA35822015BE795E00FBA2B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CA35822215BE795E00FBA2B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CA35822415BE795E00FBA2B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		CA35822815BE795E00FBA2B4 /* MapViewDemo-Info.plist */ = {isa = PBXFileReference; path = "MapViewDemo-Info.plist"; sourceTree = "<group>"; };
+		CA35822815BE795E00FBA2B4 /* MapViewDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MapViewDemo-Info.plist"; sourceTree = "<group>"; };
 		CA35822A15BE795E00FBA2B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CA35822C15BE795E00FBA2B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CA35822E15BE795E00FBA2B4 /* MapViewDemo-Prefix.pch */ = {isa = PBXFileReference; path = "MapViewDemo-Prefix.pch"; sourceTree = "<group>"; };
-		CA35822F15BE795E00FBA2B4 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		CA35822E15BE795E00FBA2B4 /* MapViewDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MapViewDemo-Prefix.pch"; sourceTree = "<group>"; };
+		CA35822F15BE795E00FBA2B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CA35823015BE795E00FBA2B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CA35823215BE795E00FBA2B4 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		CA35823215BE795E00FBA2B4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CA35823315BE795E00FBA2B4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CA35823615BE795E00FBA2B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		CA35823D15BE795E00FBA2B4 /* MapViewDemoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapViewDemoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA35823E15BE795E00FBA2B4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		CA35824615BE795F00FBA2B4 /* MapViewDemoTests-Info.plist */ = {isa = PBXFileReference; path = "MapViewDemoTests-Info.plist"; sourceTree = "<group>"; };
+		CA35824615BE795F00FBA2B4 /* MapViewDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MapViewDemoTests-Info.plist"; sourceTree = "<group>"; };
 		CA35824815BE795F00FBA2B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CA35824A15BE795F00FBA2B4 /* MapViewDemoTests.h */ = {isa = PBXFileReference; path = MapViewDemoTests.h; sourceTree = "<group>"; };
+		CA35824A15BE795F00FBA2B4 /* MapViewDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewDemoTests.h; sourceTree = "<group>"; };
 		CA35824B15BE795F00FBA2B4 /* MapViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewDemoTests.m; sourceTree = "<group>"; };
+		CA35825515BE7B5F00FBA2B4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = ../../../../../../../System/Library/Frameworks/CoreLocation.framework; sourceTree = "<group>"; };
+		CA35825715BE7C5D00FBA2B4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				CA35822115BE795E00FBA2B4 /* UIKit.framework in Frameworks */,
 				CA35822315BE795E00FBA2B4 /* Foundation.framework in Frameworks */,
 				CA35822515BE795E00FBA2B4 /* CoreGraphics.framework in Frameworks */,
+				CA35825615BE7B5F00FBA2B4 /* CoreLocation.framework in Frameworks */,
+				CA35825815BE7C5D00FBA2B4 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +106,8 @@
 		CA35821F15BE795E00FBA2B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA35825715BE7C5D00FBA2B4 /* MapKit.framework */,
+				CA35825515BE7B5F00FBA2B4 /* CoreLocation.framework */,
 				CA35822015BE795E00FBA2B4 /* UIKit.framework */,
 				CA35822215BE795E00FBA2B4 /* Foundation.framework */,
 				CA35822415BE795E00FBA2B4 /* CoreGraphics.framework */,
