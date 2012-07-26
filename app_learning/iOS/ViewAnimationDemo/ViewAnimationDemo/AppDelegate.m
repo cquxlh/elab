@@ -1,34 +1,27 @@
 //
 //  AppDelegate.m
-//  TabBarDemo
+//  ViewAnimationDemo
 //
-//  Created by xiao lihao on 7/25/12.
+//  Created by xiao lihao on 7/26/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import "AppDelegate.h"
 
+#import "ViewController.h"
+
 @implementation AppDelegate
 
-@synthesize rootController = _rootController;
 @synthesize window = _window;
-
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
-    NSLog([NSString stringWithFormat:@"%d", tabBarController.selectedIndex]);
-}
+@synthesize viewController = _viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    
-    [[NSBundle mainBundle] loadNibNamed:@"MainTabBar" owner:self options:nil];
-    [self.window addSubview:self.rootController.view];
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-    
-    for(UIViewController *controller in self.rootController.viewControllers)
-        NSLog(@"%@", controller.title);
     return YES;
 }
 
