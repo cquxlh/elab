@@ -20,6 +20,7 @@
 		CA16542115C0EE5E000295C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA16540215C0EE5E000295C7 /* Foundation.framework */; };
 		CA16542915C0EE5E000295C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA16542715C0EE5E000295C7 /* InfoPlist.strings */; };
 		CA16542C15C0EE5E000295C7 /* ViewAnimationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA16542B15C0EE5E000295C7 /* ViewAnimationDemoTests.m */; };
+		CA36263E15C0FB8E00B044A1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA36263D15C0FB8E00B044A1 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		CA16542815C0EE5E000295C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CA16542A15C0EE5E000295C7 /* ViewAnimationDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewAnimationDemoTests.h; sourceTree = "<group>"; };
 		CA16542B15C0EE5E000295C7 /* ViewAnimationDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewAnimationDemoTests.m; sourceTree = "<group>"; };
+		CA36263D15C0FB8E00B044A1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				CA16540115C0EE5E000295C7 /* UIKit.framework in Frameworks */,
 				CA16540315C0EE5E000295C7 /* Foundation.framework in Frameworks */,
 				CA16540515C0EE5E000295C7 /* CoreGraphics.framework in Frameworks */,
+				CA36263E15C0FB8E00B044A1 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +103,7 @@
 		CA1653FF15C0EE5E000295C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA36263D15C0FB8E00B044A1 /* QuartzCore.framework */,
 				CA16540015C0EE5E000295C7 /* UIKit.framework */,
 				CA16540215C0EE5E000295C7 /* Foundation.framework */,
 				CA16540415C0EE5E000295C7 /* CoreGraphics.framework */,
@@ -429,6 +433,7 @@
 				CA16543115C0EE5E000295C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CA16543215C0EE5E000295C7 /* Build configuration list for PBXNativeTarget "ViewAnimationDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +442,7 @@
 				CA16543415C0EE5E000295C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

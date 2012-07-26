@@ -1,35 +1,15 @@
 //
 //  ViewController.m
-//  ViewAnimationDemo
+//  ImagePickerDemo
 //
 //  Created by xiao lihao on 7/26/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import "ViewController.h"
-#import <QuartzCore/QuartzCore.h>
+
 @implementation ViewController
-
--(IBAction)changeText:(id)sender{
-    CGContextRef context=UIGraphicsGetCurrentContext();
-    [UIView beginAnimations:nil context:context];
-    [UIView setAnimationCurve:UIViewAnimationCurveLinear];
-    [UIView setAnimationDuration:3.0];
-    
-    UILabel *label= (UILabel*)[self.view viewWithTag:101];
-    //label.text = @"hello view animation";
-    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:label cache:YES];
-    
-    //CGRect newframe=label.frame;
-    //newframe.origin=CGPointMake(5, 5);
-    //label.frame = newframe;
-    
-    [self.view setAlpha:0.5];
-    [self.view setAlpha:1];
-
-    [UIView commitAnimations];
-                     
-}
+@synthesize imageView;
 
 - (void)didReceiveMemoryWarning
 {
@@ -44,15 +24,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    /* ???
-    CALayer *grayCover = [[CALayer alloc] init];
-    grayCover.backgroundColor = [[[UIColor blackColor] colorWithAlphaComponent:0] CGColor];
-
-    [self.view.layer addSublayer:grayCover];*/
 }
 
 - (void)viewDidUnload
 {
+    [self setImageView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -84,4 +60,38 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (IBAction)choosephoto:(id)sender {
+    UIImagePickerController * picker = [[UIImagePickerController alloc] init];
+	picker.delegate = self;
+    picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+
+    
+	[self presentModalViewController:picker animated:YES];
+}
+
+- (IBAction)takephoto:(id)sender {
+    UIImagePickerController * picker = [[UIImagePickerController alloc] init];
+	picker.delegate = self;
+    
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+	[self presentModalViewController:picker animated:YES];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker
+    didFinishPickingMediaWithInfo:(NSDictionary *)info {
+	[picker dismissModalViewControllerAnimated:YES];
+	imageView.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+}
 @end
+
+
+
+
+
+
+
+
+
+
+
