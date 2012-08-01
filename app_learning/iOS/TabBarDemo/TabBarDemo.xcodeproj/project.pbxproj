@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA22C7A915C8C6BD00A12717 /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA22C7A815C8C6BD00A12717 /* Empty.xib */; };
 		CAB9671B15BFE5BE008923D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB9671A15BFE5BE008923D7 /* UIKit.framework */; };
 		CAB9671D15BFE5BE008923D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB9671C15BFE5BE008923D7 /* Foundation.framework */; };
 		CAB9671F15BFE5BE008923D7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB9671E15BFE5BE008923D7 /* CoreGraphics.framework */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA22C7A815C8C6BD00A12717 /* Empty.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
 		CAB9671615BFE5BE008923D7 /* TabBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB9671A15BFE5BE008923D7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CAB9671C15BFE5BE008923D7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -129,6 +131,7 @@
 				CAB9674E15BFE60C008923D7 /* GreyView.h */,
 				CAB9675315BFE619008923D7 /* YellowView.h */,
 				CAB9675815BFE658008923D7 /* MainTabBar.xib */,
+				CA22C7A815C8C6BD00A12717 /* Empty.xib */,
 				CAB9675415BFE619008923D7 /* YellowView.m */,
 				CAB9675515BFE619008923D7 /* YellowView.xib */,
 				CAB9674F15BFE60C008923D7 /* GreyView.m */,
@@ -245,6 +248,7 @@
 				CAB9675215BFE60C008923D7 /* GreyView.xib in Resources */,
 				CAB9675715BFE619008923D7 /* YellowView.xib in Resources */,
 				CAB9675915BFE658008923D7 /* MainTabBar.xib in Resources */,
+				CA22C7A915C8C6BD00A12717 /* Empty.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +449,7 @@
 				CAB9674515BFE5BE008923D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CAB9674615BFE5BE008923D7 /* Build configuration list for PBXNativeTarget "TabBarDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -453,6 +458,7 @@
 				CAB9674815BFE5BE008923D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
