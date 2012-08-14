@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CACDC95815D8982C0084BDF5 /* imge1.png in Resources */ = {isa = PBXBuildFile; fileRef = CACDC95715D8982C0084BDF5 /* imge1.png */; };
+		CACDC95B15D8987C0084BDF5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACDC95A15D8987C0084BDF5 /* QuartzCore.framework */; };
+		CADF010A15CF8F1500649290 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADF010915CF8F1500649290 /* Cocoa.framework */; };
+		CADF011415CF8F1500649290 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CADF011215CF8F1500649290 /* InfoPlist.strings */; };
+		CADF011615CF8F1500649290 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF011515CF8F1500649290 /* main.m */; };
+		CADF011A15CF8F1500649290 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CADF011815CF8F1500649290 /* Credits.rtf */; };
+		CADF011D15CF8F1500649290 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF011C15CF8F1500649290 /* AppDelegate.m */; };
+		CADF012015CF8F1500649290 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADF011E15CF8F1500649290 /* MainMenu.xib */; };
+		CADF012815CF8F1500649290 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADF012715CF8F1500649290 /* SenTestingKit.framework */; };
+		CADF012915CF8F1500649290 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADF010915CF8F1500649290 /* Cocoa.framework */; };
+		CADF013115CF8F1500649290 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CADF012F15CF8F1500649290 /* InfoPlist.strings */; };
+		CADF013415CF8F1500649290 /* MyTagViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF013315CF8F1500649290 /* MyTagViewTests.m */; };
+		CADF013F15CF8F8700649290 /* TagView.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF013E15CF8F8700649290 /* TagView.m */; };
+		CADF019C15CFA7E200649290 /* MyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF019B15CFA7E200649290 /* MyTextField.m */; };
+		CADF01B015CFC03600649290 /* BackView.m in Sources */ = {isa = PBXBuildFile; fileRef = CADF01AF15CFC03600649290 /* BackView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CADF012A15CF8F1500649290 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CADF00FC15CF8F1500649290 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CADF010415CF8F1500649290;
+			remoteInfo = MyTagView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CACDC95715D8982C0084BDF5 /* imge1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = imge1.png; path = ../../../../../Desktop/imge1.png; sourceTree = "<group>"; };
+		CACDC95A15D8987C0084BDF5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CADF010515CF8F1500649290 /* MyTagView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTagView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CADF010915CF8F1500649290 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		CADF010C15CF8F1500649290 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		CADF010D15CF8F1500649290 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CADF010E15CF8F1500649290 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CADF011115CF8F1500649290 /* MyTagView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyTagView-Info.plist"; sourceTree = "<group>"; };
+		CADF011315CF8F1500649290 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CADF011515CF8F1500649290 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CADF011715CF8F1500649290 /* MyTagView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyTagView-Prefix.pch"; sourceTree = "<group>"; };
+		CADF011915CF8F1500649290 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		CADF011B15CF8F1500649290 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CADF011C15CF8F1500649290 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CADF011F15CF8F1500649290 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		CADF012615CF8F1500649290 /* MyTagViewTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTagViewTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CADF012715CF8F1500649290 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		CADF012E15CF8F1500649290 /* MyTagViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyTagViewTests-Info.plist"; sourceTree = "<group>"; };
+		CADF013015CF8F1500649290 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CADF013215CF8F1500649290 /* MyTagViewTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTagViewTests.h; sourceTree = "<group>"; };
+		CADF013315CF8F1500649290 /* MyTagViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTagViewTests.m; sourceTree = "<group>"; };
+		CADF013D15CF8F8700649290 /* TagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagView.h; sourceTree = "<group>"; };
+		CADF013E15CF8F8700649290 /* TagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagView.m; sourceTree = "<group>"; };
+		CADF019A15CFA7E200649290 /* MyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTextField.h; sourceTree = "<group>"; };
+		CADF019B15CFA7E200649290 /* MyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTextField.m; sourceTree = "<group>"; };
+		CADF01AE15CFC03600649290 /* BackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackView.h; sourceTree = "<group>"; };
+		CADF01AF15CFC03600649290 /* BackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CADF010215CF8F1500649290 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CADF010A15CF8F1500649290 /* Cocoa.framework in Frameworks */,
+				CACDC95B15D8987C0084BDF5 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CADF012215CF8F1500649290 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CADF012815CF8F1500649290 /* SenTestingKit.framework in Frameworks */,
+				CADF012915CF8F1500649290 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CADF00FA15CF8F1500649290 = {
+			isa = PBXGroup;
+			children = (
+				CADF010F15CF8F1500649290 /* MyTagView */,
+				CADF012C15CF8F1500649290 /* MyTagViewTests */,
+				CADF010815CF8F1500649290 /* Frameworks */,
+				CADF010615CF8F1500649290 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CADF010615CF8F1500649290 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CADF010515CF8F1500649290 /* MyTagView.app */,
+				CADF012615CF8F1500649290 /* MyTagViewTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CADF010815CF8F1500649290 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CACDC95A15D8987C0084BDF5 /* QuartzCore.framework */,
+				CADF010915CF8F1500649290 /* Cocoa.framework */,
+				CADF012715CF8F1500649290 /* SenTestingKit.framework */,
+				CADF010B15CF8F1500649290 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CADF010B15CF8F1500649290 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CADF010C15CF8F1500649290 /* AppKit.framework */,
+				CADF010D15CF8F1500649290 /* CoreData.framework */,
+				CADF010E15CF8F1500649290 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		CADF010F15CF8F1500649290 /* MyTagView */ = {
+			isa = PBXGroup;
+			children = (
+				CADF011B15CF8F1500649290 /* AppDelegate.h */,
+				CADF019A15CFA7E200649290 /* MyTextField.h */,
+				CADF019B15CFA7E200649290 /* MyTextField.m */,
+				CADF011C15CF8F1500649290 /* AppDelegate.m */,
+				CADF01AE15CFC03600649290 /* BackView.h */,
+				CADF01AF15CFC03600649290 /* BackView.m */,
+				CADF011E15CF8F1500649290 /* MainMenu.xib */,
+				CADF013D15CF8F8700649290 /* TagView.h */,
+				CADF013E15CF8F8700649290 /* TagView.m */,
+				CADF011015CF8F1500649290 /* Supporting Files */,
+			);
+			path = MyTagView;
+			sourceTree = "<group>";
+		};
+		CADF011015CF8F1500649290 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CACDC95715D8982C0084BDF5 /* imge1.png */,
+				CADF011115CF8F1500649290 /* MyTagView-Info.plist */,
+				CADF011215CF8F1500649290 /* InfoPlist.strings */,
+				CADF011515CF8F1500649290 /* main.m */,
+				CADF011715CF8F1500649290 /* MyTagView-Prefix.pch */,
+				CADF011815CF8F1500649290 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CADF012C15CF8F1500649290 /* MyTagViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				CADF013215CF8F1500649290 /* MyTagViewTests.h */,
+				CADF013315CF8F1500649290 /* MyTagViewTests.m */,
+				CADF012D15CF8F1500649290 /* Supporting Files */,
+			);
+			path = MyTagViewTests;
+			sourceTree = "<group>";
+		};
+		CADF012D15CF8F1500649290 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CADF012E15CF8F1500649290 /* MyTagViewTests-Info.plist */,
+				CADF012F15CF8F1500649290 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CADF010415CF8F1500649290 /* MyTagView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CADF013715CF8F1500649290 /* Build configuration list for PBXNativeTarget "MyTagView" */;
+			buildPhases = (
+				CADF010115CF8F1500649290 /* Sources */,
+				CADF010215CF8F1500649290 /* Frameworks */,
+				CADF010315CF8F1500649290 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyTagView;
+			productName = MyTagView;
+			productReference = CADF010515CF8F1500649290 /* MyTagView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CADF012515CF8F1500649290 /* MyTagViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CADF013A15CF8F1500649290 /* Build configuration list for PBXNativeTarget "MyTagViewTests" */;
+			buildPhases = (
+				CADF012115CF8F1500649290 /* Sources */,
+				CADF012215CF8F1500649290 /* Frameworks */,
+				CADF012315CF8F1500649290 /* Resources */,
+				CADF012415CF8F1500649290 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CADF012B15CF8F1500649290 /* PBXTargetDependency */,
+			);
+			name = MyTagViewTests;
+			productName = MyTagViewTests;
+			productReference = CADF012615CF8F1500649290 /* MyTagViewTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CADF00FC15CF8F1500649290 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = CADF00FF15CF8F1500649290 /* Build configuration list for PBXProject "MyTagView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CADF00FA15CF8F1500649290;
+			productRefGroup = CADF010615CF8F1500649290 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CADF010415CF8F1500649290 /* MyTagView */,
+				CADF012515CF8F1500649290 /* MyTagViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CADF010315CF8F1500649290 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CADF011415CF8F1500649290 /* InfoPlist.strings in Resources */,
+				CADF011A15CF8F1500649290 /* Credits.rtf in Resources */,
+				CADF012015CF8F1500649290 /* MainMenu.xib in Resources */,
+				CACDC95815D8982C0084BDF5 /* imge1.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CADF012315CF8F1500649290 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CADF013115CF8F1500649290 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CADF012415CF8F1500649290 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CADF010115CF8F1500649290 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CADF011615CF8F1500649290 /* main.m in Sources */,
+				CADF011D15CF8F1500649290 /* AppDelegate.m in Sources */,
+				CADF013F15CF8F8700649290 /* TagView.m in Sources */,
+				CADF019C15CFA7E200649290 /* MyTextField.m in Sources */,
+				CADF01B015CFC03600649290 /* BackView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CADF012115CF8F1500649290 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CADF013415CF8F1500649290 /* MyTagViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CADF012B15CF8F1500649290 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CADF010415CF8F1500649290 /* MyTagView */;
+			targetProxy = CADF012A15CF8F1500649290 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CADF011215CF8F1500649290 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CADF011315CF8F1500649290 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CADF011815CF8F1500649290 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CADF011915CF8F1500649290 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		CADF011E15CF8F1500649290 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CADF011F15CF8F1500649290 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		CADF012F15CF8F1500649290 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CADF013015CF8F1500649290 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CADF013515CF8F1500649290 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CADF013615CF8F1500649290 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CADF013815CF8F1500649290 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyTagView/MyTagView-Prefix.pch";
+				INFOPLIST_FILE = "MyTagView/MyTagView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CADF013915CF8F1500649290 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyTagView/MyTagView-Prefix.pch";
+				INFOPLIST_FILE = "MyTagView/MyTagView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CADF013B15CF8F1500649290 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyTagView.app/Contents/MacOS/MyTagView";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyTagView/MyTagView-Prefix.pch";
+				INFOPLIST_FILE = "MyTagViewTests/MyTagViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		CADF013C15CF8F1500649290 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyTagView.app/Contents/MacOS/MyTagView";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyTagView/MyTagView-Prefix.pch";
+				INFOPLIST_FILE = "MyTagViewTests/MyTagViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CADF00FF15CF8F1500649290 /* Build configuration list for PBXProject "MyTagView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CADF013515CF8F1500649290 /* Debug */,
+				CADF013615CF8F1500649290 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CADF013715CF8F1500649290 /* Build configuration list for PBXNativeTarget "MyTagView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CADF013815CF8F1500649290 /* Debug */,
+				CADF013915CF8F1500649290 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CADF013A15CF8F1500649290 /* Build configuration list for PBXNativeTarget "MyTagViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CADF013B15CF8F1500649290 /* Debug */,
+				CADF013C15CF8F1500649290 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CADF00FC15CF8F1500649290 /* Project object */;
+}
