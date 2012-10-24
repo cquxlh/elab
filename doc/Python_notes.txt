@@ -1,0 +1,33 @@
+
+-----------AWS Key--------
+aws_access_key_id='0D4AXHDZK5RBMC4FZAG2'
+aws_secret_access_key='5qsn2BgH8G/dfE22FLrsPTrc3SYvHWPyLyLt9XGm'
+
+
+--------------nginx, uwsgi, django configure----------------
+//nginx:
+server {
+        listen 8001;
+        server_name     174.129.28.80;
+         location / {
+                uwsgi_pass     unix:///tmp/l3.sock;
+                include        uwsgi_params;
+        }
+}
+//keep default configure on wsgi.py that created by django
+
+//RUN uwsgi
+uwsgi -s /tmp/l3.sock -wsgi-file wsgi.py 
+
+//RUN nginx
+sudo nginx
+if config file changed:
+sudo nginx -s reload
+
+note:when nginx is running, nginx get a nginx user, but this user
+can't acess /tmp/l3.sock created by uwsgi, chomd 777 /tmp/l3.sock
+
+
+web debug:
+
+GET:curl -v http://127.0.0.1:8000/api/?login="\{\"user\":\"dilun\",\"password\":\"123456\"\}"

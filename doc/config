@@ -1,0 +1,4 @@
+Host ec2-test
+ HostName 174.129.28.80
+ User ec2-user
+ IdentityFile /Users/tll007/.ssh/dilun.pem
