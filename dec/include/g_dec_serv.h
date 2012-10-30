@@ -23,7 +23,9 @@ struct _dec_server_connection{
 
   DEC_SERVER server;
 
-  int32_t last_heartbeat;
+  int32_t heartbeat;
+
+  struct _GString * app_name;
 };
 
 struct _dec_server{

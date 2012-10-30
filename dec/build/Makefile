@@ -128,6 +128,19 @@ _serv/fast:
 .PHONY : _serv/fast
 
 #=============================================================================
+# Target rules for targets named _worker
+
+# Build rule for target.
+_worker: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _worker
+.PHONY : _worker
+
+# fast build rule for target.
+_worker/fast:
+	$(MAKE) -f CMakeFiles/_worker.dir/build.make CMakeFiles/_worker.dir/build
+.PHONY : _worker/fast
+
+#=============================================================================
 # Target rules for targets named dec
 
 # Build rule for target.
@@ -188,6 +201,30 @@ src/_serv.c.s:
 	$(MAKE) -f CMakeFiles/_serv.dir/build.make CMakeFiles/_serv.dir/src/_serv.c.s
 .PHONY : src/_serv.c.s
 
+src/_worker.o: src/_worker.c.o
+.PHONY : src/_worker.o
+
+# target to build an object file
+src/_worker.c.o:
+	$(MAKE) -f CMakeFiles/_worker.dir/build.make CMakeFiles/_worker.dir/src/_worker.c.o
+.PHONY : src/_worker.c.o
+
+src/_worker.i: src/_worker.c.i
+.PHONY : src/_worker.i
+
+# target to preprocess a source file
+src/_worker.c.i:
+	$(MAKE) -f CMakeFiles/_worker.dir/build.make CMakeFiles/_worker.dir/src/_worker.c.i
+.PHONY : src/_worker.c.i
+
+src/_worker.s: src/_worker.c.s
+.PHONY : src/_worker.s
+
+# target to generate assembly for a file
+src/_worker.c.s:
+	$(MAKE) -f CMakeFiles/_worker.dir/build.make CMakeFiles/_worker.dir/src/_worker.c.s
+.PHONY : src/_worker.c.s
+
 src/g_dec_serv.o: src/g_dec_serv.c.o
 .PHONY : src/g_dec_serv.o
 
@@ -212,6 +249,54 @@ src/g_dec_serv.c.s:
 	$(MAKE) -f CMakeFiles/dec.dir/build.make CMakeFiles/dec.dir/src/g_dec_serv.c.s
 .PHONY : src/g_dec_serv.c.s
 
+src/g_dec_util.o: src/g_dec_util.c.o
+.PHONY : src/g_dec_util.o
+
+# target to build an object file
+src/g_dec_util.c.o:
+	$(MAKE) -f CMakeFiles/dec.dir/build.make CMakeFiles/dec.dir/src/g_dec_util.c.o
+.PHONY : src/g_dec_util.c.o
+
+src/g_dec_util.i: src/g_dec_util.c.i
+.PHONY : src/g_dec_util.i
+
+# target to preprocess a source file
+src/g_dec_util.c.i:
+	$(MAKE) -f CMakeFiles/dec.dir/build.make CMakeFiles/dec.dir/src/g_dec_util.c.i
+.PHONY : src/g_dec_util.c.i
+
+src/g_dec_util.s: src/g_dec_util.c.s
+.PHONY : src/g_dec_util.s
+
+# target to generate assembly for a file
+src/g_dec_util.c.s:
+	$(MAKE) -f CMakeFiles/dec.dir/build.make CMakeFiles/dec.dir/src/g_dec_util.c.s
+.PHONY : src/g_dec_util.c.s
+
+src/g_dec_worker.o: src/g_dec_worker.c.o
+.PHONY : src/g_dec_worker.o
+
+# target to build an object file
+src/g_dec_worker.c.o:
+	$(MAKE) -f CMakeFiles/dec.dir/build.make CMakeFiles/dec.dir/src/g_dec_worker.c.o
+.PHONY : src/g_dec_worker.c.o
+
+src/g_dec_worker.i: src/g_dec_worker.c.i
+.PHONY : src/g_dec_worker.i
+
+# target to preprocess a source file
+src/g_dec_worker.c.i:
+	$(MAKE) -f CMakeFiles/dec.dir/build.make CMakeFiles/dec.dir/src/g_dec_worker.c.i
+.PHONY : src/g_dec_worker.c.i
+
+src/g_dec_worker.s: src/g_dec_worker.c.s
+.PHONY : src/g_dec_worker.s
+
+# target to generate assembly for a file
+src/g_dec_worker.c.s:
+	$(MAKE) -f CMakeFiles/dec.dir/build.make CMakeFiles/dec.dir/src/g_dec_worker.c.s
+.PHONY : src/g_dec_worker.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -220,6 +305,7 @@ help:
 	@echo "... depend"
 	@echo "... _client"
 	@echo "... _serv"
+	@echo "... _worker"
 	@echo "... dec"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
@@ -229,9 +315,18 @@ help:
 	@echo "... src/_serv.o"
 	@echo "... src/_serv.i"
 	@echo "... src/_serv.s"
+	@echo "... src/_worker.o"
+	@echo "... src/_worker.i"
+	@echo "... src/_worker.s"
 	@echo "... src/g_dec_serv.o"
 	@echo "... src/g_dec_serv.i"
 	@echo "... src/g_dec_serv.s"
+	@echo "... src/g_dec_util.o"
+	@echo "... src/g_dec_util.i"
+	@echo "... src/g_dec_util.s"
+	@echo "... src/g_dec_worker.o"
+	@echo "... src/g_dec_worker.i"
+	@echo "... src/g_dec_worker.s"
 .PHONY : help
 
 

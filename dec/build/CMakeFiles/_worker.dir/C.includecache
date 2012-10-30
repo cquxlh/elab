@@ -28,7 +28,7 @@ g_dec_worker_f.h
 
 ../include/g_dec_worker_f.h
 
-/Users/tll007/dev/elab/dec/src/_serv.c
+/Users/tll007/dev/elab/dec/src/_worker.c
 stdio.h
 -
 stdlib.h

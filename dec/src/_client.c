@@ -28,7 +28,7 @@ int main(){
      char      *str;
 
      char buf[21]={0}, buf2[1024]={0};
-     const char* s="hello dec";
+     const char* s="app1";
      int32_t type=0, size=strlen(s);
      
      memcpy(buf, &type, 4);
@@ -56,7 +56,7 @@ int main(){
     }
     
 
-    int x=write(sockfd, buf, 21);
+    int x=write(sockfd, buf, size+12);
     printf("send:%d\n", x);
     char buf3[1024]= {0};
 

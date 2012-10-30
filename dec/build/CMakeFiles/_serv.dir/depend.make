@@ -4,5 +4,8 @@
 CMakeFiles/_serv.dir/src/_serv.c.o: ../include/dec.h
 CMakeFiles/_serv.dir/src/_serv.c.o: ../include/g_dec_serv.h
 CMakeFiles/_serv.dir/src/_serv.c.o: ../include/g_dec_serv_f.h
+CMakeFiles/_serv.dir/src/_serv.c.o: ../include/g_dec_util_f.h
+CMakeFiles/_serv.dir/src/_serv.c.o: ../include/g_dec_worker.h
+CMakeFiles/_serv.dir/src/_serv.c.o: ../include/g_dec_worker_f.h
 CMakeFiles/_serv.dir/src/_serv.c.o: ../src/_serv.c
 

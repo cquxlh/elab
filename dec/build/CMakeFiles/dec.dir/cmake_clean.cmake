@@ -1,5 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/dec.dir/src/g_dec_serv.c.o"
+  "CMakeFiles/dec.dir/src/g_dec_util.c.o"
+  "CMakeFiles/dec.dir/src/g_dec_worker.c.o"
   "libdec.pdb"
   "libdec.a"
 )

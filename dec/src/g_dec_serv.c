@@ -1,10 +1,11 @@
 #include "g_dec_internal.h"
-#include "dec.h"
+#include "g_dec_serv.h"
+
 
 
 DEC_SERVER_CONNECTION dec_server_connection_init(struct bufferevent *bev,
 						 int32_t fd,
-						 DEC_SERVER server) {
+						 DEC_SERVER server){
   DEC_SERVER_CONNECTION conn=NULL;
 
   conn=(DEC_SERVER_CONNECTION)malloc(sizeof(struct _dec_server_connection));
@@ -14,14 +15,21 @@ DEC_SERVER_CONNECTION dec_server_connection_init(struct bufferevent *bev,
   conn->fd=fd;
   conn->server=server;
   conn->bev=bev;
-  conn->last_heartbeat=time(0);
+  conn->heartbeat=time(0);
   
+  conn->app_name=g_string_new("");
+  if(!conn->app_name){
+    free(conn);
+    return NULL;
+  }
   return conn;
 }
 
-void dec_server_connection_free(DEC_SERVER_CONNECTION conn) {
+void dec_server_connection_free(DEC_SERVER_CONNECTION conn){
 
+  bufferevent_disable(conn->bev, EV_READ|EV_WRITE);
   bufferevent_free(conn->bev);
+  g_string_free(conn->app_name, TRUE);
   free(conn);
 }
 
@@ -40,73 +48,23 @@ void dec_server_worker_remove_by_fd(DEC_SERVER server,
 static void dec_server_net_event_callback(struct bufferevent *bev, 
 					  short what, 
 					  void *p){
-  DEC_SERVER_CONNECTION conn=(DEC_SERVER_CONNECTION)p;
-  DEC_SERVER server=conn->server;
+  DEC_SERVER server=(DEC_SERVER)p;
+  DEC_SERVER_CONNECTION conn=NULL;
+  int fd;
 
-  if(errno!=EAGAIN && errno!=EINTR)
-    printf("Got an event in net server: %s\n",
-	   evutil_socket_error_to_string(EVUTIL_SOCKET_ERROR()));
+  fd = bufferevent_getfd(bev);
+  printf("Got an event in net server: %s\n",
+	 evutil_socket_error_to_string(EVUTIL_SOCKET_ERROR()));
   
   if (what & (BEV_EVENT_EOF|BEV_EVENT_ERROR)) {
     if (what & BEV_EVENT_ERROR) {
       if (errno)
 	perror("connection error");
-    }    
-    if(errno!=EAGAIN && errno!=EINTR)
+    }
+    conn=g_hash_table_lookup(server->fd2worker, &fd);
+    if(conn)
       dec_server_worker_remove_by_fd(server, conn);
-    
   }
-}
-
-
-char* message_packet_create(int32_t type,
-			    char* data,
-			    int32_t size){
-
-  char *buffer=NULL;
-
-  buffer = (char*)malloc(COM_HEADER_SIZE+size);
-  assert(buffer);
-  
-  memcpy(buffer,    &type, 4);
-  memcpy(buffer+8,  &size, 4);
-  memcpy(buffer+12, data, size);
-
-  return buffer;
-}
-
-
-int dec_server_net_message_process(DEC_SERVER server,
-				    struct bufferevent *bev,
-				    int32_t type,
-				    void *data,
-				    int32_t size){
-  DEC_SERVER_CONNECTION conn=NULL;
-  int32_t fd=-1;
-  char *buffer=NULL;
-  int32_t len=0;
-
-
-  fd = bufferevent_getfd(bev);
-
-  switch(type){
-  case COM_W_REGISTER:
-    conn=dec_server_connection_init(bev, fd, server);
-    assert(conn);
-    dec_server_worker_add_by_fd(server, fd, conn);
-     
-    /* write back to let client know register ok */
-    char *message = "worker node register ok";
-    len=strlen(message);
-    buffer = message_packet_create((int32_t)COM_S_OK, message, len);
-    bufferevent_write(bev, buffer, COM_HEADER_SIZE+len);
-    free(buffer);
-    break;
-  default:
-    return G_ERROR;
-  }
-  
-  return G_OK;
 }
 
 static void dec_server_net_message_read_callback(struct bufferevent *bev,
@@ -117,11 +75,6 @@ static void dec_server_net_message_read_callback(struct bufferevent *bev,
   int32_t size=0, type=0;
   unsigned char *src_buffer=NULL, head[12]={0};
   
-  /*
-  printf("Received %zu bytes from client\n", evbuffer_get_length(input));
-  printf("----- data ----\n");
-  printf("%.*s\n", (int)evbuffer_get_length(input), evbuffer_pullup(input, -1));
-  */
 
   src=bufferevent_get_input(bev);
   len=evbuffer_get_length(src);
@@ -137,6 +90,7 @@ static void dec_server_net_message_read_callback(struct bufferevent *bev,
     /* skip 4 bytes' padding */
     size=*(int32_t*)((char*)head+2*sizeof(int32_t));
    
+    printf("recv net message from fd:%d, ", bufferevent_getfd(bev));
     printf("total size:%d, command type:%d, data size:%d\n", (int)len, (int)type, (int)size);
     if(size > (int32_t)len)
       return;
@@ -151,7 +105,6 @@ static void dec_server_net_message_read_callback(struct bufferevent *bev,
 	return;
       }
     }
-    printf("----data----\n%s\n", src_buffer);
 
     /* process the command */
     if(dec_server_net_message_process(server, bev, type, src_buffer, size) != G_OK){
@@ -164,6 +117,44 @@ static void dec_server_net_message_read_callback(struct bufferevent *bev,
     src = bufferevent_get_input(bev);
     len = evbuffer_get_length(src);
   }
+}
+
+
+
+int dec_server_net_message_process(DEC_SERVER server,
+				    struct bufferevent *bev,
+				    int32_t type,
+				    void *data,
+				    int32_t size){
+  DEC_SERVER_CONNECTION conn=NULL;
+  int32_t fd=-1;
+  char *buf=NULL;
+
+
+  fd = bufferevent_getfd(bev);
+
+  switch(type){
+  case COM_W_REGISTER:
+
+    /* create a new connection and add to worker table */
+    conn=dec_server_connection_init(bev, fd, server);
+    assert(conn);
+    dec_server_worker_add_by_fd(server, fd, conn);
+
+    /* get application name */
+    g_string_append_len(conn->app_name, (char*)data, size);
+    printf("----COM_W_REGISTRE---\napp_name:%s\n\n", conn->app_name->str);
+
+    /* send back a confirm information */
+    message_packet_create((char**)&buf, (int32_t)COM_S_OK, (char*)NULL, (int32_t)0);
+    bufferevent_write(bev, buf, COM_HEADER_SIZE);
+    //free(buffer);
+    break;
+  default:
+    return G_ERROR;
+  }
+  
+  return G_OK;
 }
 
 
@@ -192,6 +183,7 @@ static void dec_server_accept_incoming_request_callback(struct evconnlistener *l
   
   bufferevent_enable(bev, EV_READ|EV_WRITE);
 
+  printf("----CONNECTING----\nconnection fd:%d\n\n", fd);
 }
 
 

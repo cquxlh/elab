@@ -13,6 +13,11 @@ extern "C" {
 #include <errno.h>
 #include <time.h>
 
+#include <unistd.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+
 #include <event2/bufferevent.h>
 #include <event2/buffer.h>
 #include <event2/listener.h>
