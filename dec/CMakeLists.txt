@@ -26,5 +26,3 @@ TARGET_LINK_LIBRARIES(_serv dec event glib-2.0.0)
 ADD_EXECUTABLE(_worker src/_worker.c)
 TARGET_LINK_LIBRARIES(_worker dec event glib-2.0.0)
 
-ADD_EXECUTABLE(_client src/_client.c)
-TARGET_LINK_LIBRARIES(_client)

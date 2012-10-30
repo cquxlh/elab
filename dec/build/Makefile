@@ -102,19 +102,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named _client
-
-# Build rule for target.
-_client: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _client
-.PHONY : _client
-
-# fast build rule for target.
-_client/fast:
-	$(MAKE) -f CMakeFiles/_client.dir/build.make CMakeFiles/_client.dir/build
-.PHONY : _client/fast
-
-#=============================================================================
 # Target rules for targets named _serv
 
 # Build rule for target.
@@ -152,30 +139,6 @@ dec: cmake_check_build_system
 dec/fast:
 	$(MAKE) -f CMakeFiles/dec.dir/build.make CMakeFiles/dec.dir/build
 .PHONY : dec/fast
-
-src/_client.o: src/_client.c.o
-.PHONY : src/_client.o
-
-# target to build an object file
-src/_client.c.o:
-	$(MAKE) -f CMakeFiles/_client.dir/build.make CMakeFiles/_client.dir/src/_client.c.o
-.PHONY : src/_client.c.o
-
-src/_client.i: src/_client.c.i
-.PHONY : src/_client.i
-
-# target to preprocess a source file
-src/_client.c.i:
-	$(MAKE) -f CMakeFiles/_client.dir/build.make CMakeFiles/_client.dir/src/_client.c.i
-.PHONY : src/_client.c.i
-
-src/_client.s: src/_client.c.s
-.PHONY : src/_client.s
-
-# target to generate assembly for a file
-src/_client.c.s:
-	$(MAKE) -f CMakeFiles/_client.dir/build.make CMakeFiles/_client.dir/src/_client.c.s
-.PHONY : src/_client.c.s
 
 src/_serv.o: src/_serv.c.o
 .PHONY : src/_serv.o
@@ -303,15 +266,11 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... _client"
 	@echo "... _serv"
 	@echo "... _worker"
 	@echo "... dec"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... src/_client.o"
-	@echo "... src/_client.i"
-	@echo "... src/_client.s"
 	@echo "... src/_serv.o"
 	@echo "... src/_serv.i"
 	@echo "... src/_serv.s"

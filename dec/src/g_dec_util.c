@@ -14,5 +14,4 @@ void message_packet_create(char **buf,
   memcpy(*buf,    &type, 4);
   memcpy(*buf+8,  &size, 4);
   memcpy(*buf+12, data, size);
-
 }

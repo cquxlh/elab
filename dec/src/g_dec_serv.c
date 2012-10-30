@@ -36,21 +36,32 @@ void dec_server_connection_free(DEC_SERVER_CONNECTION conn){
 void dec_server_worker_add_by_fd(DEC_SERVER server,
 				 int32_t fd,
 				 DEC_SERVER_CONNECTION conn){
-  g_hash_table_insert(server->fd2worker, (void*)&fd, (void*)conn);
+ 
+  /* MUST use dynamic memory */
+  int32_t *key=NULL;
+  key = (int32_t*)malloc(sizeof(int32_t));
+
+  assert(key);
+
+  *key = fd;
+  g_hash_table_insert(server->fd2worker, key, conn);
 }
 
-void dec_server_worker_remove_by_fd(DEC_SERVER server,
-				    DEC_SERVER_CONNECTION conn){
-    g_hash_table_remove(server->fd2worker, &conn->fd);
-    dec_server_connection_free(conn);
+
+void dec_server_fd2worker_key_destroy(gpointer key){
+  free(key);
 }
+
+void dec_server_fd2worker_value_destroy(gpointer value){
+  dec_server_connection_free((DEC_SERVER_CONNECTION)value);
+}
+
 
 static void dec_server_net_event_callback(struct bufferevent *bev, 
 					  short what, 
 					  void *p){
+  int fd=-1;
   DEC_SERVER server=(DEC_SERVER)p;
-  DEC_SERVER_CONNECTION conn=NULL;
-  int fd;
 
   fd = bufferevent_getfd(bev);
   printf("Got an event in net server: %s\n",
@@ -61,9 +72,8 @@ static void dec_server_net_event_callback(struct bufferevent *bev,
       if (errno)
 	perror("connection error");
     }
-    conn=g_hash_table_lookup(server->fd2worker, &fd);
-    if(conn)
-      dec_server_worker_remove_by_fd(server, conn);
+
+    g_hash_table_remove(server->fd2worker, &fd);
   }
 }
 
@@ -130,7 +140,6 @@ int dec_server_net_message_process(DEC_SERVER server,
   int32_t fd=-1;
   char *buf=NULL;
 
-
   fd = bufferevent_getfd(bev);
 
   switch(type){
@@ -140,7 +149,7 @@ int dec_server_net_message_process(DEC_SERVER server,
     conn=dec_server_connection_init(bev, fd, server);
     assert(conn);
     dec_server_worker_add_by_fd(server, fd, conn);
-
+    
     /* get application name */
     g_string_append_len(conn->app_name, (char*)data, size);
     printf("----COM_W_REGISTRE---\napp_name:%s\n\n", conn->app_name->str);
@@ -148,8 +157,19 @@ int dec_server_net_message_process(DEC_SERVER server,
     /* send back a confirm information */
     message_packet_create((char**)&buf, (int32_t)COM_S_OK, (char*)NULL, (int32_t)0);
     bufferevent_write(bev, buf, COM_HEADER_SIZE);
-    //free(buffer);
+    free(buf);
     break;
+
+  case COM_W_BEAT:
+    printf("----COM_W_BEAT---\nbeat fd:%d\n\n", fd);
+   
+    conn=(DEC_SERVER_CONNECTION)g_hash_table_lookup(server->fd2worker, &fd);
+    if(conn){
+      conn->heartbeat=time(0);
+      printf("timer refershed\n");
+    }
+    break;
+
   default:
     return G_ERROR;
   }
@@ -248,7 +268,10 @@ DEC_SERVER g_dec_server_init(char* port){
 					       (const struct sockaddr*)server->net_addr, 
 					       addr_len);
 
-  server->fd2worker = g_hash_table_new(g_int_hash, g_int_equal);
+  server->fd2worker = g_hash_table_new_full(g_int_hash, 
+					    g_int_equal,
+					    dec_server_fd2worker_key_destroy,
+					    dec_server_fd2worker_value_destroy);
   if(!server->fd2worker)
     return NULL;
 
@@ -262,6 +285,7 @@ void g_dec_server_start(DEC_SERVER server){
 }
 
 
+
 void g_dec_server_free(DEC_SERVER server){
 
   evconnlistener_free(server->net_listener);
@@ -269,5 +293,7 @@ void g_dec_server_free(DEC_SERVER server){
   event_base_free(server->base);  
 
   free(server->net_addr);  
+
+  g_hash_table_destroy(server->fd2worker); 
   free(server);
 }

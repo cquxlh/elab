@@ -55,6 +55,15 @@ extern "C" {
 #define G_OK 1
 #define G_ERROR 2
 
+
+enum _dec_worker_state{
+  WORKER_STATE_REGISTERING=1000,
+  WORKER_STATE_REGISTERED,
+  WORKER_STATE_IDLE,
+  WORKER_STATE_BUSY
+};
+
+#define BEAT_INTERNAL 3
 #ifdef __cplusplus
 }
 #endif

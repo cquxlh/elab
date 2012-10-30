@@ -6,23 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/Users/tll007/dev/elab/dec/src/_client.c
-stdio.h
--
-stdlib.h
--
-errno.h
--
-unistd.h
--
-string.h
--
-sys/socket.h
--
-netinet/in.h
--
-netdb.h
--
-fcntl.h
--
-

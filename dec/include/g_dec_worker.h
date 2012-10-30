@@ -33,4 +33,13 @@ struct _dec_worker{
   FILE *fp_log;
 
   struct _GString *app_name;
+
+  /* triggler worker's state */
+  int32_t state;
+
+  /* for heartbeat */
+  struct event* hb_ev;
+
+  /* for count time */
+  struct timeval hb_tv;
 };

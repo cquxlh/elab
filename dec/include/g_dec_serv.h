@@ -43,7 +43,6 @@ struct _dec_server{
   struct sockaddr_storage *net_addr;
   int port;
 
-
   /* map from file description to connection of worker */
   struct _GHashTable *fd2worker;
 
