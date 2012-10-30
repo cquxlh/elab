@@ -3,7 +3,7 @@
 #define evutil_socket_t int
 
 typedef struct _dec_server *DEC_SERVER;
-typedef struct _dec_server_connection *DEC_CONNECTION;
+typedef struct _dec_server_connection *DEC_SERVER_CONNECTION;
 
 /* struct defined in event2 */
 struct event_base;
@@ -11,17 +11,19 @@ struct evconlistener;
 struct bufferevent;
 
 /* struct defined in glib.h */
-struct GQueue;
-struct GHashTable;
-struct GString;
+struct _GQueue;
+struct _GHashTable;
+struct _GString;
 
 /* node information triggered by event */
 struct _dec_server_connection{
-  int32_t fd;
+  int fd;
 
   struct bufferevent *bev;
 
   DEC_SERVER server;
+
+  int32_t last_heartbeat;
 };
 
 struct _dec_server{
@@ -37,11 +39,11 @@ struct _dec_server{
   /* incoming msg listener */
   struct evconlistener *net_listener;
   struct sockaddr_storage *net_addr;
-  int32_t port;
+  int port;
 
 
-  /* map from file description to connection*/
-  struct GHashTable *fd2conn;
+  /* map from file description to connection of worker */
+  struct _GHashTable *fd2worker;
 
   /* for writing log */
   FILE *fp_log;

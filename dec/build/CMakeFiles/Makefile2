@@ -50,10 +50,80 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /opt/local/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/tll007/dev/dec
+CMAKE_SOURCE_DIR = /Users/tll007/dev/elab/dec
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/tll007/dev/dec/build
+CMAKE_BINARY_DIR = /Users/tll007/dev/elab/dec/build
+
+#=============================================================================
+# Target rules for target CMakeFiles/_client.dir
+
+# All Build rule for target.
+CMakeFiles/_client.dir/all:
+	$(MAKE) -f CMakeFiles/_client.dir/build.make CMakeFiles/_client.dir/depend
+	$(MAKE) -f CMakeFiles/_client.dir/build.make CMakeFiles/_client.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/tll007/dev/elab/dec/build/CMakeFiles  1
+	@echo "Built target _client"
+.PHONY : CMakeFiles/_client.dir/all
+
+# Include target in all.
+all: CMakeFiles/_client.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/_client.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tll007/dev/elab/dec/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/_client.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tll007/dev/elab/dec/build/CMakeFiles 0
+.PHONY : CMakeFiles/_client.dir/rule
+
+# Convenience name for target.
+_client: CMakeFiles/_client.dir/rule
+.PHONY : _client
+
+# clean rule for target.
+CMakeFiles/_client.dir/clean:
+	$(MAKE) -f CMakeFiles/_client.dir/build.make CMakeFiles/_client.dir/clean
+.PHONY : CMakeFiles/_client.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/_client.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/_serv.dir
+
+# All Build rule for target.
+CMakeFiles/_serv.dir/all: CMakeFiles/dec.dir/all
+	$(MAKE) -f CMakeFiles/_serv.dir/build.make CMakeFiles/_serv.dir/depend
+	$(MAKE) -f CMakeFiles/_serv.dir/build.make CMakeFiles/_serv.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/tll007/dev/elab/dec/build/CMakeFiles  2
+	@echo "Built target _serv"
+.PHONY : CMakeFiles/_serv.dir/all
+
+# Include target in all.
+all: CMakeFiles/_serv.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/_serv.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tll007/dev/elab/dec/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/_serv.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tll007/dev/elab/dec/build/CMakeFiles 0
+.PHONY : CMakeFiles/_serv.dir/rule
+
+# Convenience name for target.
+_serv: CMakeFiles/_serv.dir/rule
+.PHONY : _serv
+
+# clean rule for target.
+CMakeFiles/_serv.dir/clean:
+	$(MAKE) -f CMakeFiles/_serv.dir/build.make CMakeFiles/_serv.dir/clean
+.PHONY : CMakeFiles/_serv.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/_serv.dir/clean
+.PHONY : clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/dec.dir
@@ -62,7 +132,7 @@ CMAKE_BINARY_DIR = /Users/tll007/dev/dec/build
 CMakeFiles/dec.dir/all:
 	$(MAKE) -f CMakeFiles/dec.dir/build.make CMakeFiles/dec.dir/depend
 	$(MAKE) -f CMakeFiles/dec.dir/build.make CMakeFiles/dec.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/tll007/dev/dec/build/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/tll007/dev/elab/dec/build/CMakeFiles  3
 	@echo "Built target dec"
 .PHONY : CMakeFiles/dec.dir/all
 
@@ -72,9 +142,9 @@ all: CMakeFiles/dec.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/dec.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tll007/dev/dec/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tll007/dev/elab/dec/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/dec.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tll007/dev/dec/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tll007/dev/elab/dec/build/CMakeFiles 0
 .PHONY : CMakeFiles/dec.dir/rule
 
 # Convenience name for target.

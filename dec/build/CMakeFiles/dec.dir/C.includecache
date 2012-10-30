@@ -19,6 +19,14 @@ stdio.h
 -
 stdlib.h
 -
+string.h
+-
+assert.h
+-
+errno.h
+-
+time.h
+-
 event2/bufferevent.h
 -
 event2/buffer.h
@@ -32,11 +40,11 @@ event2/util.h
 
 ../include/g_dec_serv_f.h
 
-/Users/tll007/dev/dec/src/g_dec_serv.c
+/Users/tll007/dev/elab/dec/src/g_dec_serv.c
 g_dec_internal.h
-/Users/tll007/dev/dec/src/g_dec_internal.h
+/Users/tll007/dev/elab/dec/src/g_dec_internal.h
 dec.h
-/Users/tll007/dev/dec/src/dec.h
+/Users/tll007/dev/elab/dec/src/dec.h
 
 /usr/local/include/event2/buffer.h
 event2/event-config.h

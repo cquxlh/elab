@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /opt/local/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/tll007/dev/dec
+CMAKE_SOURCE_DIR = /Users/tll007/dev/elab/dec
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/tll007/dev/dec/build
+CMAKE_BINARY_DIR = /Users/tll007/dev/elab/dec/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tll007/dev/dec/build/CMakeFiles /Users/tll007/dev/dec/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tll007/dev/elab/dec/build/CMakeFiles /Users/tll007/dev/elab/dec/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tll007/dev/dec/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tll007/dev/elab/dec/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -102,6 +102,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named _client
+
+# Build rule for target.
+_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _client
+.PHONY : _client
+
+# fast build rule for target.
+_client/fast:
+	$(MAKE) -f CMakeFiles/_client.dir/build.make CMakeFiles/_client.dir/build
+.PHONY : _client/fast
+
+#=============================================================================
+# Target rules for targets named _serv
+
+# Build rule for target.
+_serv: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _serv
+.PHONY : _serv
+
+# fast build rule for target.
+_serv/fast:
+	$(MAKE) -f CMakeFiles/_serv.dir/build.make CMakeFiles/_serv.dir/build
+.PHONY : _serv/fast
+
+#=============================================================================
 # Target rules for targets named dec
 
 # Build rule for target.
@@ -113,6 +139,54 @@ dec: cmake_check_build_system
 dec/fast:
 	$(MAKE) -f CMakeFiles/dec.dir/build.make CMakeFiles/dec.dir/build
 .PHONY : dec/fast
+
+src/_client.o: src/_client.c.o
+.PHONY : src/_client.o
+
+# target to build an object file
+src/_client.c.o:
+	$(MAKE) -f CMakeFiles/_client.dir/build.make CMakeFiles/_client.dir/src/_client.c.o
+.PHONY : src/_client.c.o
+
+src/_client.i: src/_client.c.i
+.PHONY : src/_client.i
+
+# target to preprocess a source file
+src/_client.c.i:
+	$(MAKE) -f CMakeFiles/_client.dir/build.make CMakeFiles/_client.dir/src/_client.c.i
+.PHONY : src/_client.c.i
+
+src/_client.s: src/_client.c.s
+.PHONY : src/_client.s
+
+# target to generate assembly for a file
+src/_client.c.s:
+	$(MAKE) -f CMakeFiles/_client.dir/build.make CMakeFiles/_client.dir/src/_client.c.s
+.PHONY : src/_client.c.s
+
+src/_serv.o: src/_serv.c.o
+.PHONY : src/_serv.o
+
+# target to build an object file
+src/_serv.c.o:
+	$(MAKE) -f CMakeFiles/_serv.dir/build.make CMakeFiles/_serv.dir/src/_serv.c.o
+.PHONY : src/_serv.c.o
+
+src/_serv.i: src/_serv.c.i
+.PHONY : src/_serv.i
+
+# target to preprocess a source file
+src/_serv.c.i:
+	$(MAKE) -f CMakeFiles/_serv.dir/build.make CMakeFiles/_serv.dir/src/_serv.c.i
+.PHONY : src/_serv.c.i
+
+src/_serv.s: src/_serv.c.s
+.PHONY : src/_serv.s
+
+# target to generate assembly for a file
+src/_serv.c.s:
+	$(MAKE) -f CMakeFiles/_serv.dir/build.make CMakeFiles/_serv.dir/src/_serv.c.s
+.PHONY : src/_serv.c.s
 
 src/g_dec_serv.o: src/g_dec_serv.c.o
 .PHONY : src/g_dec_serv.o
@@ -144,9 +218,17 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... _client"
+	@echo "... _serv"
 	@echo "... dec"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... src/_client.o"
+	@echo "... src/_client.i"
+	@echo "... src/_client.s"
+	@echo "... src/_serv.o"
+	@echo "... src/_serv.i"
+	@echo "... src/_serv.s"
 	@echo "... src/g_dec_serv.o"
 	@echo "... src/g_dec_serv.i"
 	@echo "... src/g_dec_serv.s"

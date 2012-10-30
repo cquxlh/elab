@@ -8,24 +8,47 @@ extern "C" {
 #include <glib.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+#include <errno.h>
+#include <time.h>
+
 #include <event2/bufferevent.h>
 #include <event2/buffer.h>
 #include <event2/listener.h>
 #include <event2/util.h>
 
-/* message header info */
-#define W_REGISTER 0
-#define R_REGISTER 1
-#define W_BEAT 2
-#define R_BEAT 3
+/** dec net package format
+ *
+ * ----package header(12 bytes)----
+ * command type(4 bytes, unsigned int)
+ * reserved(4 bytes, padding by 0)
+ * data size(4 bytes, unsigned int)
+ *
+ * ----data(optional)----
+ * data raws...(data size)
+ */
 
-#define S_OK 4
-#define S_ERROR 5
-#define W_OK 6
-#define W_ERROR 7
-#define R_OK 8
-#define R_ERROR 9
+#define COM_HEADER_SIZE 12
 
+#define COM_W_REGISTER 0
+#define COM_R_REGISTER 1
+#define COM_W_BEAT 2
+#define COM_R_BEAT 3
+
+#define COM_S_OK 4
+#define COM_S_ERROR 5
+#define COM_W_OK 6
+#define COM_W_ERROR 7
+#define COM_R_OK 8
+#define COM_R_ERROR 9
+
+#define COM_W_IDLE 10
+#define COM_R_IDLE 11
+
+
+#define G_OK 1
+#define G_ERROR 2
 
 #ifdef __cplusplus
 }

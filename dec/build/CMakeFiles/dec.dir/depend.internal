@@ -6,7 +6,7 @@ CMakeFiles/dec.dir/src/g_dec_serv.c.o
  ../include/g_dec_internal.h
  ../include/g_dec_serv.h
  ../include/g_dec_serv_f.h
- /Users/tll007/dev/dec/src/g_dec_serv.c
+ /Users/tll007/dev/elab/dec/src/g_dec_serv.c
  /usr/local/include/event2/buffer.h
  /usr/local/include/event2/bufferevent.h
  /usr/local/include/event2/event-config.h
