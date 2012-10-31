@@ -3,17 +3,15 @@
 
 
 
-static void heartbeat_cb(evutil_socket_t fd,
+static void dec_worker_heartbeat_cb(evutil_socket_t fd,
 			 short event,
 			 void *p){
 
   DEC_WORKER worker=(DEC_WORKER)p;
   char *buf=NULL;
 
-  printf("send heartbeat msg to fd:%d\n", bufferevent_getfd(worker->bev));
-
   /* send heartbeat message */
-  message_packet_create((char**)&buf, (int32_t)COM_W_BEAT, (char*)NULL, (int32_t)0);
+  util_message_packet_create((char**)&buf, (int32_t)COM_W_BEAT, (char*)NULL, (int32_t)0);
   bufferevent_write(worker->bev, buf, COM_HEADER_SIZE);
   free(buf);
 
@@ -36,23 +34,49 @@ int dec_worker_net_message_process(DEC_WORKER worker,
   fd = bufferevent_getfd(bev);
 
   switch(worker->state){
-  case WORKER_STATE_REGISTERING:
+
+    /* register ok, set heartbeat timer and send idle message */
+  case WORKER_STATE_REGISTER:
     if(type == COM_S_OK){
-      worker->state=WORKER_STATE_REGISTERED;
       
       /* set timer */
-      worker->hb_ev = evtimer_new(worker->base, heartbeat_cb, worker);
+      worker->hb_ev = evtimer_new(worker->base, dec_worker_heartbeat_cb, worker);
       assert(worker->hb_ev);
       
       worker->hb_tv.tv_sec = BEAT_INTERNAL;
       worker->hb_tv.tv_usec = 0;
-
       evtimer_add(worker->hb_ev, &worker->hb_tv);
+
+      /* send idle mesage */
+      util_message_packet_create((char**)&buf, COM_W_IDLE, (char*)NULL, (int32_t)0);
+      bufferevent_write(worker->bev, buf, COM_HEADER_SIZE);
+
+      worker->state=WORKER_STATE_IDLE;
+      free(buf);
     }
     break;
+
+    /* server get idle message, worker wait to download task file */
+  case WORKER_STATE_IDLE:
+    if(type == COM_W_TASK){
+      int32_t i = *(int32_t*)data;
+      int32_t j = *(int32_t*)((char*)data+4);
+      printf("%d+%d=%d\n", i, j, i+j);
+
+      /* send idle mesage */
+      util_message_packet_create((char**)&buf, COM_W_IDLE, (char*)NULL, (int32_t)0);
+      bufferevent_write(worker->bev, buf, COM_HEADER_SIZE);
+
+      worker->state=WORKER_STATE_IDLE;
+      free(buf);
+    }
+    break;
+
   default:
     ;
   }
+
+  return G_OK;
 }
 
 static void dec_worker_net_message_read_callback(struct bufferevent *bev,
@@ -107,6 +131,25 @@ static void dec_worker_net_message_read_callback(struct bufferevent *bev,
   }
 }
 
+static void dec_worker_net_event_callback(struct bufferevent *bev, 
+					  short what, 
+					  void *p){
+  DEC_WORKER worker=(DEC_WORKER)p;
+
+  printf("Got an event in net server: %s\n",
+	 evutil_socket_error_to_string(EVUTIL_SOCKET_ERROR()));
+  
+  if (what & (BEV_EVENT_EOF|BEV_EVENT_ERROR)) {
+    if (what & BEV_EVENT_ERROR) {
+      if (errno)
+	perror("connection error\n");
+    }
+
+    printf("server error, worker exit\n");
+    g_dec_worker_free(worker);
+    exit(-1);
+  }
+}
 
 DEC_WORKER g_dec_worker_init(char *serv_ip,
 			     char *serv_port,
@@ -148,7 +191,8 @@ DEC_WORKER g_dec_worker_init(char *serv_ip,
   bufferevent_enable(worker->local_bev, EV_READ|EV_WRITE);
 
  
-  message_packet_create((char**)&buf, COM_W_REGISTER, app_name, strlen(app_name));
+  util_message_packet_create((char**)&buf, COM_W_REGISTER, app_name, strlen(app_name));
+
   /* set server connection */
   memset(&sin, 0, sizeof(sin));
   if((sin.sin_port=htons(atoi(serv_port))) == 0)
@@ -183,7 +227,7 @@ DEC_WORKER g_dec_worker_init(char *serv_ip,
   bufferevent_setcb(worker->bev,
 		    dec_worker_net_message_read_callback,
 		    NULL,
-		    NULL,
+		    dec_worker_net_event_callback,
 		    worker);
 
   bufferevent_enable(worker->bev, EV_READ|EV_WRITE);
@@ -197,7 +241,7 @@ DEC_WORKER g_dec_worker_init(char *serv_ip,
   
   /* send register message */
   bufferevent_write(worker->bev, buf, COM_HEADER_SIZE+strlen(app_name));
-  worker->state = WORKER_STATE_REGISTERING;
+  worker->state = WORKER_STATE_REGISTER;
   free(buf);
 
   return worker;

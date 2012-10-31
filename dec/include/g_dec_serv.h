@@ -26,6 +26,8 @@ struct _dec_server_connection{
   int32_t heartbeat;
 
   struct _GString * app_name;
+  
+  long long task_cnt;
 };
 
 struct _dec_server{
@@ -48,4 +50,16 @@ struct _dec_server{
 
   /* for writing log */
   FILE *fp_log;
+
+  /* for checking state(heartbeat timeout) of worker and reducer */
+  struct event *st_ev;
+
+  /* for count time */
+  struct timeval st_tv;
+
+  /* map form child process id to connnection of worker */
+  struct _GHashTable *pid2worker;
+
+  /* for trigger new task */
+  struct event *task_ev;
 };

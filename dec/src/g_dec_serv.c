@@ -16,7 +16,8 @@ DEC_SERVER_CONNECTION dec_server_connection_init(struct bufferevent *bev,
   conn->server=server;
   conn->bev=bev;
   conn->heartbeat=time(0);
-  
+  conn->task_cnt=0;
+
   conn->app_name=g_string_new("");
   if(!conn->app_name){
     free(conn);
@@ -48,7 +49,7 @@ void dec_server_worker_add_by_fd(DEC_SERVER server,
 }
 
 
-void dec_server_fd2worker_key_destroy(gpointer key){
+void dec_server_int_key_destroy(gpointer key){
   free(key);
 }
 
@@ -56,6 +57,87 @@ void dec_server_fd2worker_value_destroy(gpointer value){
   dec_server_connection_free((DEC_SERVER_CONNECTION)value);
 }
 
+void _dec_server_state_check(gpointer key,
+		  gpointer value,
+		  gpointer p){
+  
+   DEC_SERVER server=(DEC_SERVER)p;
+   DEC_SERVER_CONNECTION conn=(DEC_SERVER_CONNECTION)value;
+   
+   /* if timeout, delete the connection */
+   if(time(0)-conn->heartbeat >= MAX_TIMEOUT)
+     g_hash_table_remove(server->fd2worker, &conn->fd);
+}
+
+static void dec_server_state_check_cb(evutil_socket_t fd,
+			   short event,
+			   void *p){
+
+  DEC_SERVER server=(DEC_SERVER)p;
+  
+  g_hash_table_foreach(server->fd2worker, _dec_server_state_check, server);
+
+  /* reset timer */
+  server->st_tv.tv_sec = STATE_CHECK_INTERNAL;
+  server->st_tv.tv_usec = 0;
+  evtimer_add(server->st_ev, &server->st_tv);
+}
+
+static void dec_server_send_task(DEC_SERVER_CONNECTION conn){
+
+  char task_path[1024]={0}, task_file[1024]={0};
+  char *file_name=NULL;
+  char *data=NULL;
+  int32_t size=0;
+  char *buf=NULL;
+
+  sprintf(task_path, "%s/%s", TASK_ROOT_DIR_ON_SERVER, conn->app_name->str);
+  util_fetch_single_file(&file_name, task_path);
+
+  sprintf(task_file, "%s/%s", task_path,  file_name);
+  util_load_file(&data, &size, task_file);
+  
+  printf("send task file:%s\n", task_file);
+
+  /* send task file */
+  util_message_packet_create(&buf, (int32_t)COM_W_TASK, data, size);
+
+  printf("file size:%d\n", size);
+  bufferevent_write(conn->bev, buf, COM_HEADER_SIZE+size);
+  remove(task_file);
+
+  /*
+  if(data)
+    free(data);
+
+  if(buf)
+  free(buf);
+
+  */
+}
+
+static void dec_server_task_check_cb(evutil_socket_t fd,
+			   short event,
+			   void *p){
+
+  DEC_SERVER server=(DEC_SERVER)p;
+  DEC_SERVER_CONNECTION conn=NULL;
+
+
+  int pid=-1;
+  while((pid=waitpid(-1, NULL, 0)) > 0){
+
+    printf("child process exit:%d\n", pid);
+    conn=(DEC_SERVER_CONNECTION)g_hash_table_lookup(server->pid2worker, &pid);
+    if(!conn)
+      break;
+
+    dec_server_send_task(conn);
+
+    /* remove pid from pid2worker */
+    //...
+  }
+}
 
 static void dec_server_net_event_callback(struct bufferevent *bev, 
 					  short what, 
@@ -139,10 +221,14 @@ int dec_server_net_message_process(DEC_SERVER server,
   DEC_SERVER_CONNECTION conn=NULL;
   int32_t fd=-1;
   char *buf=NULL;
-
+  char task_path[1024]={0}, exe_path[1024]={0}, task_file[1024]={0};
+  pid_t pid=-1;
+  int32_t *pid_key=NULL;
+ 
   fd = bufferevent_getfd(bev);
 
   switch(type){
+
   case COM_W_REGISTER:
 
     /* create a new connection and add to worker table */
@@ -155,7 +241,7 @@ int dec_server_net_message_process(DEC_SERVER server,
     printf("----COM_W_REGISTRE---\napp_name:%s\n\n", conn->app_name->str);
 
     /* send back a confirm information */
-    message_packet_create((char**)&buf, (int32_t)COM_S_OK, (char*)NULL, (int32_t)0);
+    util_message_packet_create((char**)&buf, (int32_t)COM_S_OK, (char*)NULL, (int32_t)0);
     bufferevent_write(bev, buf, COM_HEADER_SIZE);
     free(buf);
     break;
@@ -164,12 +250,45 @@ int dec_server_net_message_process(DEC_SERVER server,
     printf("----COM_W_BEAT---\nbeat fd:%d\n\n", fd);
    
     conn=(DEC_SERVER_CONNECTION)g_hash_table_lookup(server->fd2worker, &fd);
-    if(conn){
+    if(conn)
       conn->heartbeat=time(0);
-      printf("timer refershed\n");
-    }
     break;
 
+    /* create task file and send to worker */
+  case COM_W_IDLE:
+    conn=(DEC_SERVER_CONNECTION)g_hash_table_lookup(server->fd2worker, &fd);
+    if(conn){
+      sprintf(task_path, "%s/%s", TASK_ROOT_DIR_ON_SERVER, conn->app_name->str);
+      sprintf(exe_path, "%s/%s", TASK_CREATE_EXE_DIR_ON_SERVER, conn->app_name->str);
+      sprintf(task_file, "%s/%s_task_%d", task_path,  conn->app_name->str, conn->task_cnt++);
+
+      printf("----COM_W_IDLE---\ntask_file:%s\nexe_path:%s\n\n", task_file, exe_path);
+      
+      /* create a directory if it doesn't already exist. create intermediate parent directories as needed, too. */
+      if(util_mkdir_with_path(task_path) == 0){
+	pid = -1;
+
+	pid=fork();
+	assert(pid != -1);
+	
+	pid_key = (int32_t*)malloc(sizeof(int32_t));
+	*pid_key=pid;
+	/* in parent process */
+	if(pid > 0){
+
+	  /* add pid to trigger table */
+	  g_hash_table_insert(server->pid2worker, pid_key, conn);
+	  return G_OK;
+	}
+
+
+	/* execute task create program in child process */
+	if(pid == 0)	  
+	  execl(exe_path, conn->app_name->str, task_file, NULL);
+      }
+    }
+    break;
+    
   default:
     return G_ERROR;
   }
@@ -270,12 +389,33 @@ DEC_SERVER g_dec_server_init(char* port){
 
   server->fd2worker = g_hash_table_new_full(g_int_hash, 
 					    g_int_equal,
-					    dec_server_fd2worker_key_destroy,
+					    dec_server_int_key_destroy,
 					    dec_server_fd2worker_value_destroy);
-  if(!server->fd2worker)
+
+  server->pid2worker = g_hash_table_new_full(g_int_hash, 
+					     g_int_equal,
+					     dec_server_int_key_destroy,
+					     NULL);/* can't delete connnection */
+  if(!server->fd2worker||!server->pid2worker)
     return NULL;
 
 
+  /* set timer */
+  server->st_ev = evtimer_new(server->base, dec_server_state_check_cb, server);
+  if(!server->st_ev)
+    return NULL;
+
+  server->st_tv.tv_sec = STATE_CHECK_INTERNAL;
+  server->st_tv.tv_usec = 0;
+
+  evtimer_add(server->st_ev, &server->st_tv);
+
+  /* task trigger */
+  server->task_ev=evsignal_new(server->base, SIGCHLD, dec_server_task_check_cb, server);
+  if(!server->task_ev)
+    return NULL;
+  
+  evsignal_add(server->task_ev, NULL);
   return server;
 }
 
@@ -295,5 +435,7 @@ void g_dec_server_free(DEC_SERVER server){
   free(server->net_addr);  
 
   g_hash_table_destroy(server->fd2worker); 
+  g_hash_table_destroy(server->pid2worker); 
+
   free(server);
 }

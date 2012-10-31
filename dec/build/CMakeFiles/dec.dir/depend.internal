@@ -5,6 +5,12 @@ CMakeFiles/dec.dir/src/g_dec_serv.c.o
  ../include/g_dec_internal.h
  ../include/g_dec_serv.h
  /Users/tll007/dev/elab/dec/src/g_dec_serv.c
+ /opt/local/include/event2/buffer.h
+ /opt/local/include/event2/bufferevent.h
+ /opt/local/include/event2/event-config.h
+ /opt/local/include/event2/event.h
+ /opt/local/include/event2/listener.h
+ /opt/local/include/event2/util.h
  /opt/local/include/glib-2.0/glib.h
  /opt/local/include/glib-2.0/glib/deprecated/gallocator.h
  /opt/local/include/glib-2.0/glib/deprecated/gcache.h
@@ -81,15 +87,15 @@ CMakeFiles/dec.dir/src/g_dec_serv.c.o
  /opt/local/include/glib-2.0/glib/gversionmacros.h
  /opt/local/include/glib-2.0/glib/gwin32.h
  /opt/local/lib/glib-2.0/include/glibconfig.h
- /usr/local/include/event2/buffer.h
- /usr/local/include/event2/bufferevent.h
- /usr/local/include/event2/event-config.h
- /usr/local/include/event2/event.h
- /usr/local/include/event2/listener.h
- /usr/local/include/event2/util.h
 CMakeFiles/dec.dir/src/g_dec_util.c.o
  ../include/g_dec_internal.h
  /Users/tll007/dev/elab/dec/src/g_dec_util.c
+ /opt/local/include/event2/buffer.h
+ /opt/local/include/event2/bufferevent.h
+ /opt/local/include/event2/event-config.h
+ /opt/local/include/event2/event.h
+ /opt/local/include/event2/listener.h
+ /opt/local/include/event2/util.h
  /opt/local/include/glib-2.0/glib.h
  /opt/local/include/glib-2.0/glib/deprecated/gallocator.h
  /opt/local/include/glib-2.0/glib/deprecated/gcache.h
@@ -166,16 +172,16 @@ CMakeFiles/dec.dir/src/g_dec_util.c.o
  /opt/local/include/glib-2.0/glib/gversionmacros.h
  /opt/local/include/glib-2.0/glib/gwin32.h
  /opt/local/lib/glib-2.0/include/glibconfig.h
- /usr/local/include/event2/buffer.h
- /usr/local/include/event2/bufferevent.h
- /usr/local/include/event2/event-config.h
- /usr/local/include/event2/event.h
- /usr/local/include/event2/listener.h
- /usr/local/include/event2/util.h
 CMakeFiles/dec.dir/src/g_dec_worker.c.o
  ../include/g_dec_internal.h
  ../include/g_dec_worker.h
  /Users/tll007/dev/elab/dec/src/g_dec_worker.c
+ /opt/local/include/event2/buffer.h
+ /opt/local/include/event2/bufferevent.h
+ /opt/local/include/event2/event-config.h
+ /opt/local/include/event2/event.h
+ /opt/local/include/event2/listener.h
+ /opt/local/include/event2/util.h
  /opt/local/include/glib-2.0/glib.h
  /opt/local/include/glib-2.0/glib/deprecated/gallocator.h
  /opt/local/include/glib-2.0/glib/deprecated/gcache.h
@@ -252,9 +258,3 @@ CMakeFiles/dec.dir/src/g_dec_worker.c.o
  /opt/local/include/glib-2.0/glib/gversionmacros.h
  /opt/local/include/glib-2.0/glib/gwin32.h
  /opt/local/lib/glib-2.0/include/glibconfig.h
- /usr/local/include/event2/buffer.h
- /usr/local/include/event2/bufferevent.h
- /usr/local/include/event2/event-config.h
- /usr/local/include/event2/event.h
- /usr/local/include/event2/listener.h
- /usr/local/include/event2/util.h

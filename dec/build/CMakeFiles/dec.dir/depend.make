@@ -4,6 +4,12 @@
 CMakeFiles/dec.dir/src/g_dec_serv.c.o: ../include/g_dec_internal.h
 CMakeFiles/dec.dir/src/g_dec_serv.c.o: ../include/g_dec_serv.h
 CMakeFiles/dec.dir/src/g_dec_serv.c.o: ../src/g_dec_serv.c
+CMakeFiles/dec.dir/src/g_dec_serv.c.o: /opt/local/include/event2/buffer.h
+CMakeFiles/dec.dir/src/g_dec_serv.c.o: /opt/local/include/event2/bufferevent.h
+CMakeFiles/dec.dir/src/g_dec_serv.c.o: /opt/local/include/event2/event-config.h
+CMakeFiles/dec.dir/src/g_dec_serv.c.o: /opt/local/include/event2/event.h
+CMakeFiles/dec.dir/src/g_dec_serv.c.o: /opt/local/include/event2/listener.h
+CMakeFiles/dec.dir/src/g_dec_serv.c.o: /opt/local/include/event2/util.h
 CMakeFiles/dec.dir/src/g_dec_serv.c.o: /opt/local/include/glib-2.0/glib.h
 CMakeFiles/dec.dir/src/g_dec_serv.c.o: /opt/local/include/glib-2.0/glib/deprecated/gallocator.h
 CMakeFiles/dec.dir/src/g_dec_serv.c.o: /opt/local/include/glib-2.0/glib/deprecated/gcache.h
@@ -80,15 +86,15 @@ CMakeFiles/dec.dir/src/g_dec_serv.c.o: /opt/local/include/glib-2.0/glib/gversion
 CMakeFiles/dec.dir/src/g_dec_serv.c.o: /opt/local/include/glib-2.0/glib/gversionmacros.h
 CMakeFiles/dec.dir/src/g_dec_serv.c.o: /opt/local/include/glib-2.0/glib/gwin32.h
 CMakeFiles/dec.dir/src/g_dec_serv.c.o: /opt/local/lib/glib-2.0/include/glibconfig.h
-CMakeFiles/dec.dir/src/g_dec_serv.c.o: /usr/local/include/event2/buffer.h
-CMakeFiles/dec.dir/src/g_dec_serv.c.o: /usr/local/include/event2/bufferevent.h
-CMakeFiles/dec.dir/src/g_dec_serv.c.o: /usr/local/include/event2/event-config.h
-CMakeFiles/dec.dir/src/g_dec_serv.c.o: /usr/local/include/event2/event.h
-CMakeFiles/dec.dir/src/g_dec_serv.c.o: /usr/local/include/event2/listener.h
-CMakeFiles/dec.dir/src/g_dec_serv.c.o: /usr/local/include/event2/util.h
 
 CMakeFiles/dec.dir/src/g_dec_util.c.o: ../include/g_dec_internal.h
 CMakeFiles/dec.dir/src/g_dec_util.c.o: ../src/g_dec_util.c
+CMakeFiles/dec.dir/src/g_dec_util.c.o: /opt/local/include/event2/buffer.h
+CMakeFiles/dec.dir/src/g_dec_util.c.o: /opt/local/include/event2/bufferevent.h
+CMakeFiles/dec.dir/src/g_dec_util.c.o: /opt/local/include/event2/event-config.h
+CMakeFiles/dec.dir/src/g_dec_util.c.o: /opt/local/include/event2/event.h
+CMakeFiles/dec.dir/src/g_dec_util.c.o: /opt/local/include/event2/listener.h
+CMakeFiles/dec.dir/src/g_dec_util.c.o: /opt/local/include/event2/util.h
 CMakeFiles/dec.dir/src/g_dec_util.c.o: /opt/local/include/glib-2.0/glib.h
 CMakeFiles/dec.dir/src/g_dec_util.c.o: /opt/local/include/glib-2.0/glib/deprecated/gallocator.h
 CMakeFiles/dec.dir/src/g_dec_util.c.o: /opt/local/include/glib-2.0/glib/deprecated/gcache.h
@@ -165,16 +171,16 @@ CMakeFiles/dec.dir/src/g_dec_util.c.o: /opt/local/include/glib-2.0/glib/gversion
 CMakeFiles/dec.dir/src/g_dec_util.c.o: /opt/local/include/glib-2.0/glib/gversionmacros.h
 CMakeFiles/dec.dir/src/g_dec_util.c.o: /opt/local/include/glib-2.0/glib/gwin32.h
 CMakeFiles/dec.dir/src/g_dec_util.c.o: /opt/local/lib/glib-2.0/include/glibconfig.h
-CMakeFiles/dec.dir/src/g_dec_util.c.o: /usr/local/include/event2/buffer.h
-CMakeFiles/dec.dir/src/g_dec_util.c.o: /usr/local/include/event2/bufferevent.h
-CMakeFiles/dec.dir/src/g_dec_util.c.o: /usr/local/include/event2/event-config.h
-CMakeFiles/dec.dir/src/g_dec_util.c.o: /usr/local/include/event2/event.h
-CMakeFiles/dec.dir/src/g_dec_util.c.o: /usr/local/include/event2/listener.h
-CMakeFiles/dec.dir/src/g_dec_util.c.o: /usr/local/include/event2/util.h
 
 CMakeFiles/dec.dir/src/g_dec_worker.c.o: ../include/g_dec_internal.h
 CMakeFiles/dec.dir/src/g_dec_worker.c.o: ../include/g_dec_worker.h
 CMakeFiles/dec.dir/src/g_dec_worker.c.o: ../src/g_dec_worker.c
+CMakeFiles/dec.dir/src/g_dec_worker.c.o: /opt/local/include/event2/buffer.h
+CMakeFiles/dec.dir/src/g_dec_worker.c.o: /opt/local/include/event2/bufferevent.h
+CMakeFiles/dec.dir/src/g_dec_worker.c.o: /opt/local/include/event2/event-config.h
+CMakeFiles/dec.dir/src/g_dec_worker.c.o: /opt/local/include/event2/event.h
+CMakeFiles/dec.dir/src/g_dec_worker.c.o: /opt/local/include/event2/listener.h
+CMakeFiles/dec.dir/src/g_dec_worker.c.o: /opt/local/include/event2/util.h
 CMakeFiles/dec.dir/src/g_dec_worker.c.o: /opt/local/include/glib-2.0/glib.h
 CMakeFiles/dec.dir/src/g_dec_worker.c.o: /opt/local/include/glib-2.0/glib/deprecated/gallocator.h
 CMakeFiles/dec.dir/src/g_dec_worker.c.o: /opt/local/include/glib-2.0/glib/deprecated/gcache.h
@@ -251,10 +257,4 @@ CMakeFiles/dec.dir/src/g_dec_worker.c.o: /opt/local/include/glib-2.0/glib/gversi
 CMakeFiles/dec.dir/src/g_dec_worker.c.o: /opt/local/include/glib-2.0/glib/gversionmacros.h
 CMakeFiles/dec.dir/src/g_dec_worker.c.o: /opt/local/include/glib-2.0/glib/gwin32.h
 CMakeFiles/dec.dir/src/g_dec_worker.c.o: /opt/local/lib/glib-2.0/include/glibconfig.h
-CMakeFiles/dec.dir/src/g_dec_worker.c.o: /usr/local/include/event2/buffer.h
-CMakeFiles/dec.dir/src/g_dec_worker.c.o: /usr/local/include/event2/bufferevent.h
-CMakeFiles/dec.dir/src/g_dec_worker.c.o: /usr/local/include/event2/event-config.h
-CMakeFiles/dec.dir/src/g_dec_worker.c.o: /usr/local/include/event2/event.h
-CMakeFiles/dec.dir/src/g_dec_worker.c.o: /usr/local/include/event2/listener.h
-CMakeFiles/dec.dir/src/g_dec_worker.c.o: /usr/local/include/event2/util.h
 
