@@ -22,6 +22,25 @@ static void dec_worker_heartbeat_cb(evutil_socket_t fd,
 }
 
 
+static void dec_worker_task_check_cb(evutil_socket_t fd,
+				     short event,
+				     void *p){
+  DEC_WORKER worker = (DEC_WORKER)p;
+  char *buf=NULL;
+  
+  waitpid(-1, NULL, 0);
+  sleep(30);
+
+  /* send idle mesage */
+  util_message_packet_create((char**)&buf, COM_W_IDLE, (char*)NULL, (int32_t)0);
+  bufferevent_write(worker->bev, buf, COM_HEADER_SIZE);
+
+  worker->state=WORKER_STATE_IDLE;
+  free(buf);
+}
+
+
+
 int dec_worker_net_message_process(DEC_WORKER worker,
 				   struct bufferevent *bev,
 				   int32_t type,
@@ -29,6 +48,8 @@ int dec_worker_net_message_process(DEC_WORKER worker,
 				   int32_t size){
   int32_t fd=-1;
   char *buf=NULL;
+  char task_path[1024], exe_path[1024];
+  pid_t pid=-1;
 
 
   fd = bufferevent_getfd(bev);
@@ -59,17 +80,37 @@ int dec_worker_net_message_process(DEC_WORKER worker,
     /* server get idle message, worker wait to download task file */
   case WORKER_STATE_IDLE:
     if(type == COM_W_TASK){
-      int32_t i = *(int32_t*)data;
-      int32_t j = *(int32_t*)((char*)data+4);
-      printf("%d+%d=%d\n", i, j, i+j);
 
-      /* send idle mesage */
+      worker->state=WORKER_STATE_BUSY;
+
+      /* save file to task dir */
+      sprintf(task_path, "%s/%s", worker->task_root_dir->str, worker->app_name->str);
+      util_save_file(data, size, task_path, NULL);
+
+      pid=fork();
+      if(pid > 0)
+	return G_OK;
+      
+      if(pid == 0){
+	sprintf(exe_path, "%s/%s", worker->exe_root_dir->str, worker->app_name->str);
+	execl(exe_path, worker->app_name->str, task_path, NULL);
+	exit(0);
+      }
+     
+    }
+
+    /* no more task on server right now */
+    else if(type == COM_W_TASK_NONE||type == COM_S_BUSY){
+      sleep(5);
+
+      /* send idle mesage again */
       util_message_packet_create((char**)&buf, COM_W_IDLE, (char*)NULL, (int32_t)0);
       bufferevent_write(worker->bev, buf, COM_HEADER_SIZE);
 
       worker->state=WORKER_STATE_IDLE;
       free(buf);
     }
+    
     break;
 
   default:
@@ -157,6 +198,8 @@ DEC_WORKER g_dec_worker_init(char *serv_ip,
   evutil_socket_t fds[2];
   struct sockaddr_in sin;
   char *buf=NULL;
+  char *task_root="./w_task";
+  char *exe_root="./w_exe";
 
   DEC_WORKER worker= (struct _dec_worker*)malloc(sizeof(struct _dec_worker));
   if(!worker)
@@ -244,6 +287,22 @@ DEC_WORKER g_dec_worker_init(char *serv_ip,
   worker->state = WORKER_STATE_REGISTER;
   free(buf);
 
+  worker->task_root_dir = g_string_new("");
+  worker->exe_root_dir  = g_string_new("");
+
+  if(!worker->task_root_dir||!worker->exe_root_dir)
+    return NULL;
+
+  g_string_append_len(worker->task_root_dir, task_root, strlen(task_root));
+  g_string_append_len(worker->exe_root_dir, exe_root, strlen(exe_root));
+
+  /* task trigger */
+  worker->task_ev=evsignal_new(worker->base, SIGCHLD, dec_worker_task_check_cb, worker);
+  if(!worker->task_ev)
+    return NULL;
+  
+  evsignal_add(worker->task_ev, NULL);
+
   return worker;
 }
 
@@ -254,6 +313,8 @@ void g_dec_worker_start(DEC_WORKER worker){
 
 void g_dec_worker_free(DEC_WORKER worker){
   event_base_free(worker->base);  
+  g_string_free(worker->task_root_dir, TRUE);
+  g_string_free(worker->exe_root_dir,  TRUE);
   g_string_free(worker->app_name, TRUE);
   free(worker);
 }

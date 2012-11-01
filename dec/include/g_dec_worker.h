@@ -34,6 +34,9 @@ struct _dec_worker{
 
   struct _GString *app_name;
 
+  struct _GString *task_root_dir;
+  struct _GString *exe_root_dir;
+  
   /* triggler worker's state */
   int32_t state;
 
@@ -42,4 +45,7 @@ struct _dec_worker{
 
   /* for count time */
   struct timeval hb_tv;
+
+  /* for trigger new task */
+  struct event *task_ev;
 };

@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include "dec.h"
 
-int main(){
+int main(int argc, char* argv[]){
   DEC_WORKER worker=NULL;
 
-  worker = g_dec_worker_init("127.0.0.1", "9000", "app1");
+  worker = g_dec_worker_init("127.0.0.1", "9000", argv[1]);
   if(!worker){
     printf("dec worker init error\n");
     return 1;

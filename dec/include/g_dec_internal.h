@@ -52,7 +52,10 @@ extern "C" {
 #define COM_R_IDLE 11
 
 #define COM_W_TASK 12
+#define COM_W_TASK_NONE 13
 
+#define COM_S_BUSY 14
+ 
 #define G_OK 0
 #define G_ERROR -1
 
@@ -67,8 +70,7 @@ enum _dec_worker_state{
 #define STATE_CHECK_INTERNAL 10
 #define MAX_TIMEOUT 30
 
-#define TASK_ROOT_DIR_ON_SERVER       "./task"
-#define TASK_CREATE_EXE_DIR_ON_SERVER "./exe"
+
 #ifdef __cplusplus
 }
 #endif

@@ -46,10 +46,6 @@ g_dec_internal.h
 g_dec_serv.h
 /Users/tll007/dev/elab/dec/src/g_dec_serv.h
 
-/Users/tll007/dev/elab/dec/src/g_dec_util.c
-g_dec_internal.h
-/Users/tll007/dev/elab/dec/src/g_dec_internal.h
-
 /opt/local/include/event2/buffer.h
 event2/event-config.h
 -

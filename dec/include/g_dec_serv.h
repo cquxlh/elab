@@ -62,4 +62,10 @@ struct _dec_server{
 
   /* for trigger new task */
   struct event *task_ev;
+
+  /* new task root dir */
+  struct _GString *task_root_dir;
+
+  /* exe root dir */
+  struct _GString *exe_root_dir;
 };

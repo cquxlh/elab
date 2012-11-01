@@ -91,29 +91,37 @@ static void dec_server_send_task(DEC_SERVER_CONNECTION conn){
   int32_t size=0;
   char *buf=NULL;
 
-  sprintf(task_path, "%s/%s", TASK_ROOT_DIR_ON_SERVER, conn->app_name->str);
-  util_fetch_single_file(&file_name, task_path);
+  sprintf(task_path, "%s/%s", conn->server->task_root_dir->str, conn->app_name->str);
+
+  /* no more task can be send */
+  if(util_fetch_single_file(&file_name, task_path) != G_OK){
+    util_message_packet_create((char**)&buf, COM_W_TASK_NONE, (char*)NULL, (int32_t)0);
+
+    bufferevent_write(conn->bev, buf, COM_HEADER_SIZE);
+    free(buf);
+
+    printf("no more task for fd:%d\n\n", conn->fd);
+    return;
+  }
 
   sprintf(task_file, "%s/%s", task_path,  file_name);
   util_load_file(&data, &size, task_file);
   
-  printf("send task file:%s\n", task_file);
+  printf("send:\"%s\" to fd:%d\n\n", task_file, conn->fd);
 
   /* send task file */
   util_message_packet_create(&buf, (int32_t)COM_W_TASK, data, size);
 
-  printf("file size:%d\n", size);
   bufferevent_write(conn->bev, buf, COM_HEADER_SIZE+size);
   remove(task_file);
 
-  /*
+  
   if(data)
     free(data);
 
   if(buf)
   free(buf);
 
-  */
 }
 
 static void dec_server_task_check_cb(evutil_socket_t fd,
@@ -127,7 +135,6 @@ static void dec_server_task_check_cb(evutil_socket_t fd,
   int pid=-1;
   while((pid=waitpid(-1, NULL, 0)) > 0){
 
-    printf("child process exit:%d\n", pid);
     conn=(DEC_SERVER_CONNECTION)g_hash_table_lookup(server->pid2worker, &pid);
     if(!conn)
       break;
@@ -135,7 +142,7 @@ static void dec_server_task_check_cb(evutil_socket_t fd,
     dec_server_send_task(conn);
 
     /* remove pid from pid2worker */
-    //...
+    g_hash_table_remove(server->pid2worker, &pid);
   }
 }
 
@@ -256,25 +263,41 @@ int dec_server_net_message_process(DEC_SERVER server,
 
     /* create task file and send to worker */
   case COM_W_IDLE:
+   
     conn=(DEC_SERVER_CONNECTION)g_hash_table_lookup(server->fd2worker, &fd);
     if(conn){
-      sprintf(task_path, "%s/%s", TASK_ROOT_DIR_ON_SERVER, conn->app_name->str);
-      sprintf(exe_path, "%s/%s", TASK_CREATE_EXE_DIR_ON_SERVER, conn->app_name->str);
-      sprintf(task_file, "%s/%s_task_%d", task_path,  conn->app_name->str, conn->task_cnt++);
+      printf("----COM_W_IDLE---\nfd:%d\n\n", conn->fd);
+      sprintf(task_path, "%s/%s", server->task_root_dir->str, conn->app_name->str);
 
-      printf("----COM_W_IDLE---\ntask_file:%s\nexe_path:%s\n\n", task_file, exe_path);
+      /* read old task first */
+      if(util_dir_empty(task_path) != G_OK){
+	dec_server_send_task(conn);
+	return G_OK;
+      }
+
+      sprintf(exe_path, "%s/%s", server->exe_root_dir->str, conn->app_name->str);
+      sprintf(task_file, "%s/task_%d_%d", task_path, conn->fd, conn->task_cnt++);
+
+      
       
       /* create a directory if it doesn't already exist. create intermediate parent directories as needed, too. */
       if(util_mkdir_with_path(task_path) == 0){
 	pid = -1;
 
 	pid=fork();
-	assert(pid != -1);
-	
-	pid_key = (int32_t*)malloc(sizeof(int32_t));
-	*pid_key=pid;
+	if(pid == -1){
+	  /* send server busy message to worker */
+	  util_message_packet_create((char**)&buf, (int32_t)COM_S_BUSY, (char*)NULL, (int32_t)0);
+	  bufferevent_write(conn->bev, buf, COM_HEADER_SIZE);
+	  free(buf);
+	  return;
+	}
+		
 	/* in parent process */
 	if(pid > 0){
+
+	  pid_key = (int32_t*)malloc(sizeof(int32_t));
+	  *pid_key=pid;
 
 	  /* add pid to trigger table */
 	  g_hash_table_insert(server->pid2worker, pid_key, conn);
@@ -283,8 +306,10 @@ int dec_server_net_message_process(DEC_SERVER server,
 
 
 	/* execute task create program in child process */
-	if(pid == 0)	  
+	if(pid == 0){	  
 	  execl(exe_path, conn->app_name->str, task_file, NULL);
+	  exit(0);
+	}
       }
     }
     break;
@@ -306,7 +331,6 @@ static void dec_server_accept_incoming_request_callback(struct evconnlistener *l
   DEC_SERVER server=(DEC_SERVER)p;
   struct bufferevent *bev=NULL;
   
- 
 
   bev=bufferevent_socket_new(server->base, 
 			     fd,
@@ -329,6 +353,8 @@ static void dec_server_accept_incoming_request_callback(struct evconnlistener *l
 DEC_SERVER g_dec_server_init(char* port){
   evutil_socket_t fds[2];
   int32_t addr_len=0;
+  char *task_root="./task";
+  char *exe_root="./exe";
 
   DEC_SERVER server= (struct _dec_server*)malloc(sizeof(struct _dec_server));
   if(!server)
@@ -416,6 +442,17 @@ DEC_SERVER g_dec_server_init(char* port){
     return NULL;
   
   evsignal_add(server->task_ev, NULL);
+
+
+  server->task_root_dir = g_string_new("");
+  server->exe_root_dir  = g_string_new("");
+
+  if(!server->task_root_dir||!server->exe_root_dir)
+    return NULL;
+
+  g_string_append_len(server->task_root_dir, task_root, strlen(task_root));
+  g_string_append_len(server->exe_root_dir, exe_root, strlen(exe_root));
+
   return server;
 }
 
@@ -427,6 +464,9 @@ void g_dec_server_start(DEC_SERVER server){
 
 
 void g_dec_server_free(DEC_SERVER server){
+
+  g_string_free(server->task_root_dir, TRUE);
+  g_string_free(server->exe_root_dir,  TRUE);
 
   evconnlistener_free(server->net_listener);
   
