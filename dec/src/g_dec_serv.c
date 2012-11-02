@@ -57,16 +57,17 @@ void dec_server_fd2worker_value_destroy(gpointer value){
   dec_server_connection_free((DEC_SERVER_CONNECTION)value);
 }
 
-void _dec_server_state_check(gpointer key,
+gboolean _dec_server_state_check(gpointer key,
 		  gpointer value,
 		  gpointer p){
   
-   DEC_SERVER server=(DEC_SERVER)p;
    DEC_SERVER_CONNECTION conn=(DEC_SERVER_CONNECTION)value;
    
    /* if timeout, delete the connection */
-   if(time(0)-conn->heartbeat >= MAX_TIMEOUT)
-     g_hash_table_remove(server->fd2worker, &conn->fd);
+   if(time(0)-conn->heartbeat >= conn->server->connection_max_timeout)
+     return TRUE;
+   else
+     return FALSE;
 }
 
 static void dec_server_state_check_cb(evutil_socket_t fd,
@@ -75,10 +76,10 @@ static void dec_server_state_check_cb(evutil_socket_t fd,
 
   DEC_SERVER server=(DEC_SERVER)p;
   
-  g_hash_table_foreach(server->fd2worker, _dec_server_state_check, server);
+  g_hash_table_foreach_remove(server->fd2worker, _dec_server_state_check, server);
 
   /* reset timer */
-  server->st_tv.tv_sec = STATE_CHECK_INTERNAL;
+  server->st_tv.tv_sec = server->connection_check_internal;
   server->st_tv.tv_usec = 0;
   evtimer_add(server->st_ev, &server->st_tv);
 }
@@ -237,7 +238,8 @@ int dec_server_net_message_process(DEC_SERVER server,
   switch(type){
 
   case COM_W_REGISTER:
-
+    if(size == 0 || data == NULL)
+      return G_OK;
     /* create a new connection and add to worker table */
     conn=dec_server_connection_init(bev, fd, server);
     assert(conn);
@@ -290,7 +292,7 @@ int dec_server_net_message_process(DEC_SERVER server,
 	  util_message_packet_create((char**)&buf, (int32_t)COM_S_BUSY, (char*)NULL, (int32_t)0);
 	  bufferevent_write(conn->bev, buf, COM_HEADER_SIZE);
 	  free(buf);
-	  return;
+	  return G_OK;
 	}
 		
 	/* in parent process */
@@ -350,11 +352,13 @@ static void dec_server_accept_incoming_request_callback(struct evconnlistener *l
 }
 
 
-DEC_SERVER g_dec_server_init(char* port){
+DEC_SERVER g_dec_server_init(char *port,
+			     char *task_root_dir,
+			     char *exec_root_dir,
+			     int conn_check_internal,
+			     int conn_max_timeout){
   evutil_socket_t fds[2];
   int32_t addr_len=0;
-  char *task_root="./task";
-  char *exe_root="./exe";
 
   DEC_SERVER server= (struct _dec_server*)malloc(sizeof(struct _dec_server));
   if(!server)
@@ -426,12 +430,15 @@ DEC_SERVER g_dec_server_init(char* port){
     return NULL;
 
 
+  server->connection_check_internal=conn_check_internal;
+  server->connection_max_timeout=conn_max_timeout;
+
   /* set timer */
   server->st_ev = evtimer_new(server->base, dec_server_state_check_cb, server);
   if(!server->st_ev)
     return NULL;
 
-  server->st_tv.tv_sec = STATE_CHECK_INTERNAL;
+  server->st_tv.tv_sec = server->connection_check_internal;
   server->st_tv.tv_usec = 0;
 
   evtimer_add(server->st_ev, &server->st_tv);
@@ -450,9 +457,10 @@ DEC_SERVER g_dec_server_init(char* port){
   if(!server->task_root_dir||!server->exe_root_dir)
     return NULL;
 
-  g_string_append_len(server->task_root_dir, task_root, strlen(task_root));
-  g_string_append_len(server->exe_root_dir, exe_root, strlen(exe_root));
+  g_string_append_len(server->task_root_dir, task_root_dir, strlen(task_root_dir));
+  g_string_append_len(server->exe_root_dir, exec_root_dir, strlen(exec_root_dir));
 
+  
   return server;
 }
 

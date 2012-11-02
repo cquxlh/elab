@@ -16,7 +16,7 @@ static void dec_worker_heartbeat_cb(evutil_socket_t fd,
   free(buf);
 
   /* reset timer */
-  worker->hb_tv.tv_sec = BEAT_INTERNAL;
+  worker->hb_tv.tv_sec = worker->heartbeat_internal;
   worker->hb_tv.tv_usec = 0;
   evtimer_add(worker->hb_ev, &worker->hb_tv);
 }
@@ -29,7 +29,7 @@ static void dec_worker_task_check_cb(evutil_socket_t fd,
   char *buf=NULL;
   
   waitpid(-1, NULL, 0);
-  sleep(30);
+  sleep(1);
 
   /* send idle mesage */
   util_message_packet_create((char**)&buf, COM_W_IDLE, (char*)NULL, (int32_t)0);
@@ -64,7 +64,7 @@ int dec_worker_net_message_process(DEC_WORKER worker,
       worker->hb_ev = evtimer_new(worker->base, dec_worker_heartbeat_cb, worker);
       assert(worker->hb_ev);
       
-      worker->hb_tv.tv_sec = BEAT_INTERNAL;
+      worker->hb_tv.tv_sec = worker->heartbeat_internal;
       worker->hb_tv.tv_usec = 0;
       evtimer_add(worker->hb_ev, &worker->hb_tv);
 
@@ -94,6 +94,7 @@ int dec_worker_net_message_process(DEC_WORKER worker,
       if(pid == 0){
 	sprintf(exe_path, "%s/%s", worker->exe_root_dir->str, worker->app_name->str);
 	execl(exe_path, worker->app_name->str, task_path, NULL);
+	printf("exe:%s fail\n", exe_path);
 	exit(0);
       }
      
@@ -194,12 +195,14 @@ static void dec_worker_net_event_callback(struct bufferevent *bev,
 
 DEC_WORKER g_dec_worker_init(char *serv_ip,
 			     char *serv_port,
-			     char *app_name){
+			     char *app_name,
+			     char *task_root,
+			     char *exec_root,
+			     int heartbeat_internal){
   evutil_socket_t fds[2];
   struct sockaddr_in sin;
   char *buf=NULL;
-  char *task_root="./w_task";
-  char *exe_root="./w_exe";
+
 
   DEC_WORKER worker= (struct _dec_worker*)malloc(sizeof(struct _dec_worker));
   if(!worker)
@@ -294,7 +297,7 @@ DEC_WORKER g_dec_worker_init(char *serv_ip,
     return NULL;
 
   g_string_append_len(worker->task_root_dir, task_root, strlen(task_root));
-  g_string_append_len(worker->exe_root_dir, exe_root, strlen(exe_root));
+  g_string_append_len(worker->exe_root_dir, exec_root, strlen(exec_root));
 
   /* task trigger */
   worker->task_ev=evsignal_new(worker->base, SIGCHLD, dec_worker_task_check_cb, worker);
@@ -302,7 +305,9 @@ DEC_WORKER g_dec_worker_init(char *serv_ip,
     return NULL;
   
   evsignal_add(worker->task_ev, NULL);
-
+  
+  worker->heartbeat_internal=heartbeat_internal;
+  
   return worker;
 }
 

@@ -48,4 +48,6 @@ struct _dec_worker{
 
   /* for trigger new task */
   struct event *task_ev;
+
+  int32_t heartbeat_internal;
 };

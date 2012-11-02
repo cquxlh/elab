@@ -67,8 +67,6 @@ enum _dec_worker_state{
 };
 
 #define BEAT_INTERNAL 10
-#define STATE_CHECK_INTERNAL 10
-#define MAX_TIMEOUT 30
 
 
 #ifdef __cplusplus

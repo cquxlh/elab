@@ -68,4 +68,8 @@ struct _dec_server{
 
   /* exe root dir */
   struct _GString *exe_root_dir;
+
+  int connection_check_internal;
+  int connection_max_timeout;
+  
 };
